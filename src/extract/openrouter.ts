@@ -4,6 +4,26 @@ import { costOf, type Extractor, type ExtractResult, type ModelSpec } from "./ty
 
 const ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
 
+/** Retry budget for transient provider failures (429 rate limit, 5xx, timeout). */
+const MAX_ATTEMPTS = 4;
+const BASE_BACKOFF_MS = 1500;
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * True for failures worth retrying: provider rate limits and server-side
+ * errors. A 400 (bad request, unsupported parameter) is our bug and retrying
+ * it just wastes time.
+ *
+ * This matters more than it looks. Untreated, a 429 scores as a total
+ * extraction failure -- zero nodes, zero edges -- which is indistinguishable
+ * in the summary from a model that simply cannot read the picture. That has
+ * already made one decent model look worthless in this eval.
+ */
+function isTransient(message: string): boolean {
+  return /\b(429|408|500|502|503|504)\b/.test(message) || /timeout|aborted|ECONNRESET/i.test(message);
+}
+
 /**
  * The user-turn instruction. It has to contain the literal word "json": some
  * OpenAI-compatible providers (Alibaba, serving the Qwen models) reject a
@@ -34,6 +54,9 @@ export function openrouterExtractor(spec: ModelSpec): Extractor {
     name: spec.name,
     async extract(image, mediaType, prompt): Promise<ExtractResult> {
       const started = Date.now();
+      let lastError = "";
+
+      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
       try {
         const response = await fetch(ENDPOINT, {
           method: "POST",
@@ -106,14 +129,25 @@ export function openrouterExtractor(spec: ModelSpec): Extractor {
           error: check.success ? undefined : `schema mismatch: ${check.error.issues[0]?.message}`,
         };
       } catch (err) {
-        return {
-          graph: null,
-          raw: "",
-          usage: { inputTokens: 0, outputTokens: 0, costUsd: 0 },
-          latencyMs: Date.now() - started,
-          error: err instanceof Error ? err.message : String(err),
-        };
+        lastError = err instanceof Error ? err.message : String(err);
+        if (attempt < MAX_ATTEMPTS && isTransient(lastError)) {
+          // Exponential backoff with jitter, so parallel streams that trip the
+          // same provider limit don't all come back at the same instant.
+          const wait = BASE_BACKOFF_MS * 2 ** (attempt - 1) * (0.7 + Math.random() * 0.6);
+          await sleep(wait);
+          continue;
+        }
+        break;
       }
+      }
+
+      return {
+        graph: null,
+        raw: "",
+        usage: { inputTokens: 0, outputTokens: 0, costUsd: 0 },
+        latencyMs: Date.now() - started,
+        error: lastError,
+      };
     },
   };
 }

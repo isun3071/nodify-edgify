@@ -15,11 +15,11 @@ import type { ModelSpec } from "./types.js";
  * proved unreliable twice (see REMOVED below), which is why openrouter.ts
  * re-validates every response locally rather than trusting the contract.
  *
- * The lineup bisects a 100x price range on purpose. The first round established
- * both ends -- everything at or below $0.33 scored 0/15 clean imports, while
- * Opus 5 at $5 scored 13/15 -- and left the middle entirely unsampled. The
- * question now is where between those the edge-reading actually starts working,
- * so the additions are mid-priced and from vendors not yet tested at all.
+ * Notes below are measured, not marketing. The headline: price does not predict
+ * quality here. GLM 5.3 Flash at $0.075 matched Opus 5 at $5.00, while Haiku 4.5
+ * at $1.00 performed like the sub-$0.11 tier. Published AI2D and OCRBench
+ * rankings were a reasonable way to build this shortlist and a poor way to pick
+ * the winner -- see eval/README.md for the full table.
  *
  * Worth knowing: every model here has a `:batch` variant at half price. For a
  * 96-call eval that is real money, at the cost of an async submit/poll flow.
@@ -36,63 +36,72 @@ export const MODELS: ModelSpec[] = [
     id: "anthropic/claude-opus-5",
     inputPerMTok: 5.0,
     outputPerMTok: 25.0,
-    note: "ceiling reference: 13/15 clean in round one",
+    note:
+      "measured 10/12 clean, 0.8 fixes/graph -- never fails to parse, so it is the fallback",
   },
   {
     name: "sonnet-5",
     id: "anthropic/claude-sonnet-5",
     inputPerMTok: 2.0,
     outputPerMTok: 10.0,
-    note: "2.5x cheaper than Opus -- first step down from the known-good end",
+    note:
+      "measured 7/12 clean, 1.8 fixes -- beaten by gemini-flash at lower cost",
   },
   {
     name: "haiku-4.5",
     id: "anthropic/claude-haiku-4.5",
     inputPerMTok: 1.0,
     outputPerMTok: 5.0,
-    note: "5x cheaper than Opus",
+    note:
+      "measured 2/12 clean, 5.3 fixes -- performs like the sub-$0.11 tier at 10x the price",
   },
   {
     name: "gemini-3.8-flash",
     id: "google/gemini-3.8-flash",
     inputPerMTok: 0.75,
     outputPerMTok: 3.75,
-    note: "Google untested until now; strong diagram/document reputation",
+    note:
+      "measured 8/12 clean, 1.2 fixes -- best of the non-GLM mid tier",
   },
   {
     name: "qwen3.6-plus",
     id: "qwen/qwen3.6-plus",
     inputPerMTok: 0.325,
     outputPerMTok: 1.95,
-    note: "0.944 AI2D; round one was an HTTP 400, never actually ran",
+    note:
+      "measured 2/12 clean; returns a bare array where the schema wants an object",
   },
   {
     name: "qwen3-vl-32b",
     id: "qwen/qwen3-vl-32b-instruct",
     inputPerMTok: 0.104,
     outputPerMTok: 0.416,
-    note: "#2 on OCRBench v2 (0.674), and cheaper than the 8B it replaces",
+    note:
+      "measured 2/12 clean, 5.0 fixes -- better than the 8B it replaced, still weak",
   },
   {
     name: "mistral-small-3.2",
     id: "mistralai/mistral-small-3.2-24b-instruct",
     inputPerMTok: 0.075,
     outputPerMTok: 0.2,
-    note: "0.929 AI2D; round one 0/15 clean, 8 fixes/graph, nodes perfect",
+    note:
+      "measured 3/12 clean, 6.3 fixes; also the most rate-limited model here",
   },
   {
     name: "glm-5.3-flash",
     id: "z-ai/glm-5.3-flash",
     inputPerMTok: 0.075,
     outputPerMTok: 0.25,
-    note: "reported on the intelligence-vs-cost Pareto frontier",
+    note:
+      "DEFAULT. 9/11 clean, 0.5 fixes, 100% weight accuracy -- matches Opus 5 at 1/43rd the cost",
   },
   {
     name: "gpt-5-nano",
     id: "openai/gpt-5-nano",
     inputPerMTok: 0.05,
     outputPerMTok: 0.4,
-    note: "cheapest credible vision model; OpenAI untested until now",
+    note:
+      "measured 4/12 clean, 3.4 fixes -- best of the truly cheap tier after GLM",
   },
 ];
 

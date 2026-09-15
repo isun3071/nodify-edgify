@@ -34,6 +34,58 @@ Comparison rules worth knowing:
 - Weights compare as a multiset intersection, never pairwise by position.
 - Node labels are matched case- and whitespace-insensitively.
 
+## Results (round 2, Sept 2026)
+
+9 models x 12 fixtures at the `clean` tier. `fixes` and `edgeF1` are measured
+only over calls that reached the model; `failed` counts rate limits, timeouts
+and rejected requests separately, because averaging those in as zeros made two
+capable models look worthless in round one.
+
+| model | $/MTok in | clean | fixes/graph | edgeF1 | weightAcc | $/import |
+|---|---|---|---|---|---|---|
+| **glm-5.3-flash** | **$0.075** | **9/11** | **0.5** | **96%** | **100%** | **$0.0014** |
+| opus-5 | $5.00 | 10/12 | 0.8 | 97% | 95% | $0.0599 |
+| gemini-3.8-flash | $0.75 | 8/12 | 1.2 | 94% | 99% | $0.0241 |
+| sonnet-5 | $2.00 | 7/12 | 1.8 | 92% | 99% | $0.0270 |
+| gpt-5-nano | $0.05 | 4/12 | 3.4 | 86% | 94% | $0.0020 |
+| mistral-small-3.2 | $0.075 | 3/12 | 6.3 | 77% | 90% | $0.0003 |
+| haiku-4.5 | $1.00 | 2/12 | 5.3 | 79% | 90% | $0.0049 |
+| qwen3-vl-32b | $0.104 | 2/12 | 5.0 | 79% | 84% | $0.0005 |
+| qwen3.6-plus | $0.325 | 2/12 | 9.8 | 45% | 46% | $0.0116 |
+
+**GLM 5.3 Flash matches Opus 5 at 1/43rd the cost** -- fewer fixes per graph,
+comparable edge F1, better weight accuracy. It is the default extractor, with
+Opus 5 as the fallback for the one case in twelve where it returns invalid JSON.
+
+Three findings worth keeping:
+
+**Vertices are free; edges are the whole problem.** Every model that returned a
+schema-valid graph got the vertex set exactly right -- correct count, correct
+labels, nothing invented. All the damage is in edges, and especially in binding
+the right weight to the right edge. The bottom of the market fails at JSON
+compliance rather than at vision.
+
+**Price does not predict quality.** A $0.075 model beat a $5.00 one, and the
+$1.00 Haiku performed like the sub-$0.11 tier. Published AI2D and OCRBench
+rankings were a decent way to build a shortlist and a poor way to pick a winner.
+
+**Negative weights are the hardest fixture for every model**, the best ones
+included -- minus signs get dropped or misread more than any other feature.
+
+## What round one got wrong
+
+Input quality tiers were a good hypothesis the data refused. Across five tiers
+(`clean` through `sketch-photo`) and three models, fix counts moved within noise
+-- one model trended slightly *better* on degraded images, and Opus's single
+worst result came on its cleanest input. Model choice explained essentially all
+variance and image quality explained none.
+
+The likely reason is that synthetic degradation is too mild to stress a capable
+model, not that photo quality is irrelevant in reality. Until real phone photos
+exist to test that, `--tiers clean` is the default worth running: dropping the
+tier dimension bought 4x the fixture diversity at the same call count, and the
+fixtures are the axis that actually separates models.
+
 ## Input quality tiers
 
 Every fixture renders at five input qualities against **one shared truth file**,

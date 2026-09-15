@@ -1,6 +1,72 @@
 [
   {
     "model": "opus-5",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.00319816033710451,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.052239999999999995,
+    "latencyMs": 18441,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.005138669428999723,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.277015,
+    "latencyMs": 134457,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
     "fixture": "dijkstra-clrs",
     "tier": "clean",
     "score": {
@@ -21,22 +87,120 @@
         "recall": 1,
         "f1": 1
       },
-      "weightAccuracy": 0.7,
+      "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.008488150206363385,
-      "fixes": 3,
-      "clean": false,
-      "breakdown": {
-        "wrongWeights": 3
-      }
+      "positionError": 0.008599999999999986,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
     },
-    "costUsd": 0.055845,
-    "latencyMs": 21405
+    "costUsd": 0.05259,
+    "latencyMs": 17206,
+    "failedCall": false
   },
   {
     "model": "opus-5",
-    "fixture": "dijkstra-clrs",
-    "tier": "photo",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.014122556366679204,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.023725,
+    "latencyMs": 4603,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0032282813469610033,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.03159,
+    "latencyMs": 10648,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.010000000000000009,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.033515,
+    "latencyMs": 7178,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "k5",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
@@ -57,18 +221,1516 @@
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": null,
+      "positionError": 0.004936821018342858,
       "fixes": 0,
       "clean": true,
       "breakdown": {}
     },
-    "costUsd": 0.04063,
-    "latencyMs": 14390
+    "costUsd": 0.030665,
+    "latencyMs": 6328,
+    "failedCall": false
   },
   {
     "model": "opus-5",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 11,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.004561117067069494,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.03874,
+    "latencyMs": 10046,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "f1": 0.823529411764706
+      },
+      "weightAccuracy": 0.5714285714285714,
+      "directedCorrect": true,
+      "positionError": 0.010217949232810412,
+      "fixes": 6,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1,
+        "wrongWeights": 3
+      }
+    },
+    "costUsd": 0.05129,
+    "latencyMs": 18717,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "numeric-labels",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.00340970361175486,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.032165,
+    "latencyMs": 7838,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.00256428742861841,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.046565,
+    "latencyMs": 12582,
+    "failedCall": false
+  },
+  {
+    "model": "opus-5",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571
+      },
+      "weightAccuracy": 0.8333333333333334,
+      "directedCorrect": true,
+      "positionError": 0.004344253084278714,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1,
+        "wrongWeights": 1
+      }
+    },
+    "costUsd": 0.04882,
+    "latencyMs": 19421,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.8571428571428571,
+        "f1": 0.7999999999999999
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.01788504005998069,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 2
+      }
+    },
+    "costUsd": 0.011646,
+    "latencyMs": 4681,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 13,
+        "fp": 7,
+        "fn": 1,
+        "precision": 0.65,
+        "recall": 0.9285714285714286,
+        "f1": 0.7647058823529412
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.005116295090390242,
+      "fixes": 8,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 7
+      }
+    },
+    "costUsd": 0.085506,
+    "latencyMs": 79135,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
     "fixture": "dijkstra-clrs",
-    "tier": "sketch-photo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.004203349918173725,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.038045999999999996,
+    "latencyMs": 35838,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.04358827587654184,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.01002,
+    "latencyMs": 4095,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.14333333333333328,
+      "fixes": 2,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.014746000000000002,
+    "latencyMs": 7438,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0037326796757285266,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.011496,
+    "latencyMs": 4745,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.019832605532009776,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.011796,
+    "latencyMs": 6041,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 11,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.009245906155388362,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.021426,
+    "latencyMs": 13618,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.7777777777777778,
+        "recall": 0.7777777777777778,
+        "f1": 0.7777777777777778
+      },
+      "weightAccuracy": 0.8571428571428571,
+      "directedCorrect": true,
+      "positionError": 0.005320000000000014,
+      "fixes": 5,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 2,
+        "wrongWeights": 1
+      }
+    },
+    "costUsd": 0.072536,
+    "latencyMs": 72628,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "numeric-labels",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.024404768375256337,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.014276,
+    "latencyMs": 8062,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.01617506021401322,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.023806,
+    "latencyMs": 14625,
+    "failedCall": false
+  },
+  {
+    "model": "sonnet-5",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.011700419211682815,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.008438000000000001,
+    "latencyMs": 3559,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.6,
+        "recall": 0.8571428571428571,
+        "f1": 0.7058823529411764
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.1149396666399581,
+      "fixes": 5,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 4
+      }
+    },
+    "costUsd": 0.005176999999999999,
+    "latencyMs": 6439,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 10,
+        "fn": 5,
+        "precision": 0.47368421052631576,
+        "recall": 0.6428571428571429,
+        "f1": 0.5454545454545454
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.10434318647151043,
+      "fixes": 15,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 5,
+        "spuriousEdges": 10
+      }
+    },
+    "costUsd": 0.006312,
+    "latencyMs": 3523,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002
+      },
+      "weightAccuracy": 0.625,
+      "directedCorrect": true,
+      "positionError": 0.07710964202565256,
+      "fixes": 7,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 2,
+        "wrongWeights": 3
+      }
+    },
+    "costUsd": 0.004396,
+    "latencyMs": 3388,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.2011728178115044,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.004483,
+    "latencyMs": 2354,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9
+      },
+      "weightAccuracy": 0.7777777777777778,
+      "directedCorrect": true,
+      "positionError": 0.05235745302857262,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.004701,
+    "latencyMs": 3072,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.05000000000000002,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.0050089999999999996,
+    "latencyMs": 2867,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1,
+        "recall": 0.9,
+        "f1": 0.9473684210526316
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.06001695986712814,
+      "fixes": 1,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1
+      }
+    },
+    "costUsd": 0.004282,
+    "latencyMs": 2402,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 4,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.7272727272727273,
+        "f1": 0.6956521739130435
+      },
+      "weightAccuracy": 0.75,
+      "directedCorrect": true,
+      "positionError": 0.0998875829903632,
+      "fixes": 9,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 3,
+        "spuriousEdges": 4,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.005452,
+    "latencyMs": 3528,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 3,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "f1": 0.7058823529411765
+      },
+      "weightAccuracy": 0.6666666666666666,
+      "directedCorrect": true,
+      "positionError": 0.085738737840783,
+      "fixes": 7,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 3,
+        "spuriousEdges": 2,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.004626,
+    "latencyMs": 2568,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "numeric-labels",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 3,
+        "fn": 3,
+        "precision": 0.625,
+        "recall": 0.625,
+        "f1": 0.625
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.05950374364991093,
+      "fixes": 6,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 3,
+        "spuriousEdges": 3
+      }
+    },
+    "costUsd": 0.004862,
+    "latencyMs": 2869,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 12,
+        "fp": 4,
+        "fn": 3,
+        "precision": 0.75,
+        "recall": 0.8,
+        "f1": 0.7741935483870969
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.04555325247305753,
+      "fixes": 7,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 3,
+        "spuriousEdges": 4
+      }
+    },
+    "costUsd": 0.006232,
+    "latencyMs": 3686,
+    "failedCall": false
+  },
+  {
+    "model": "haiku-4.5",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.050000000000000024,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.003717,
+    "latencyMs": 2147,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.8571428571428571,
+        "f1": 0.7999999999999999
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0010591733660532843,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 2
+      }
+    },
+    "costUsd": 0.010683749999999999,
+    "latencyMs": 18436,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.9090909090909091,
+        "recall": 0.7142857142857143,
+        "f1": 0.8
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.004066295090390245,
+      "fixes": 5,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 4,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.09080175,
+    "latencyMs": 150250,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.007999999999999985,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.031211999999999997,
+    "latencyMs": 67206,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0010028974061906976,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.005667,
+    "latencyMs": 7437,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.006666666666666636,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00745575,
+    "latencyMs": 10121,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00707625,
+    "latencyMs": 9657,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0029418787969231796,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00572925,
+    "latencyMs": 7497,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 11,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0038189523514356974,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.008594250000000001,
+    "latencyMs": 10252,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "f1": 0.823529411764706
+      },
+      "weightAccuracy": 0.8571428571428571,
+      "directedCorrect": true,
+      "positionError": 0.00132000000000001,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1,
+        "wrongWeights": 1
+      }
+    },
+    "costUsd": 0.062374500000000006,
+    "latencyMs": 110987,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "numeric-labels",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.005845449051790658,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00507675,
+    "latencyMs": 6704,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0035002721517840086,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.008343,
+    "latencyMs": 11516,
+    "failedCall": false
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0,
+      "fixes": 2,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.04598775,
+    "latencyMs": 80936,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
+      "positionError": null,
+      "fixes": 14,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 7,
+        "missingEdges": 7
+      }
+    },
+    "costUsd": 0.004294875,
+    "latencyMs": 32170,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 14,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
+      "positionError": null,
+      "fixes": 22,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 8,
+        "missingEdges": 14
+      }
+    },
+    "costUsd": 0.02654925,
+    "latencyMs": 227113,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
@@ -87,9 +1749,46 @@
         "recall": 0.9,
         "f1": 0.9
       },
+      "weightAccuracy": 0.7777777777777778,
+      "directedCorrect": true,
+      "positionError": 0.04999999999999999,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.029143725,
+    "latencyMs": 249787,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002
+      },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": null,
+      "positionError": 0.06396525891169445,
       "fixes": 2,
       "clean": false,
       "breakdown": {
@@ -97,401 +1796,18 @@
         "spuriousEdges": 1
       }
     },
-    "costUsd": 0.08141999999999999,
-    "latencyMs": 35304
+    "costUsd": 0.0039494000000000005,
+    "latencyMs": 30218,
+    "failedCall": false
   },
   {
-    "model": "opus-5",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.008282280633100953,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.03947,
-    "latencyMs": 12208
-  },
-  {
-    "model": "opus-5",
-    "fixture": "dijkstra-clrs",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.014869920673012686,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.047085,
-    "latencyMs": 17534
-  },
-  {
-    "model": "opus-5",
-    "fixture": "numeric-labels",
+    "model": "qwen3.6-plus",
+    "fixture": "flow-network",
     "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
         "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.0024399869158106264,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.034595,
-    "latencyMs": 7495
-  },
-  {
-    "model": "opus-5",
-    "fixture": "numeric-labels",
-    "tier": "photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.030625,
-    "latencyMs": 7989
-  },
-  {
-    "model": "opus-5",
-    "fixture": "numeric-labels",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.030815,
-    "latencyMs": 7261
-  },
-  {
-    "model": "opus-5",
-    "fixture": "numeric-labels",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.005558088761406163,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.03232,
-    "latencyMs": 7322
-  },
-  {
-    "model": "opus-5",
-    "fixture": "numeric-labels",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.0069027623960354065,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.02835,
-    "latencyMs": 7250
-  },
-  {
-    "model": "opus-5",
-    "fixture": "petersen",
-    "tier": "clean",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.00680738151712616,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.04067,
-    "latencyMs": 9179
-  },
-  {
-    "model": "opus-5",
-    "fixture": "petersen",
-    "tier": "photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.048675,
-    "latencyMs": 13277
-  },
-  {
-    "model": "opus-5",
-    "fixture": "petersen",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.03869,
-    "latencyMs": 9942
-  },
-  {
-    "model": "opus-5",
-    "fixture": "petersen",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.007404780973875459,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.04147,
-    "latencyMs": 10262
-  },
-  {
-    "model": "opus-5",
-    "fixture": "petersen",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.0050586327611908954,
-      "fixes": 0,
-      "clean": true,
-      "breakdown": {}
-    },
-    "costUsd": 0.03535,
-    "latencyMs": 9551
-  },
-  {
-    "model": "mistral-small-3.2",
-    "fixture": "dijkstra-clrs",
-    "tier": "clean",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -500,34 +1816,109 @@
       },
       "edges": {
         "tp": 9,
-        "fp": 5,
+        "fp": 1,
         "fn": 1,
-        "precision": 0.6428571428571429,
+        "precision": 0.9,
         "recall": 0.9,
-        "f1": 0.75
+        "f1": 0.9
       },
-      "weightAccuracy": 0.6666666666666666,
+      "weightAccuracy": 0.7777777777777778,
       "directedCorrect": true,
-      "positionError": 0.06332,
-      "fixes": 9,
+      "positionError": 0.1007678136559531,
+      "fixes": 4,
       "clean": false,
       "breakdown": {
         "missingEdges": 1,
-        "spuriousEdges": 5,
-        "wrongWeights": 3
+        "spuriousEdges": 1,
+        "wrongWeights": 2
       }
     },
-    "costUsd": 0.0002672,
-    "latencyMs": 26804
+    "costUsd": 0.004998825,
+    "latencyMs": 39322,
+    "failedCall": false
   },
   {
-    "model": "mistral-small-3.2",
-    "fixture": "dijkstra-clrs",
-    "tier": "photo",
+    "model": "qwen3.6-plus",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
+      "positionError": null,
+      "fixes": 15,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 6,
+        "missingEdges": 9
+      }
+    },
+    "costUsd": 0.003729375,
+    "latencyMs": 28262,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
+      "positionError": null,
+      "fixes": 15,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 5,
+        "missingEdges": 10
+      }
+    },
+    "costUsd": 0.00371085,
+    "latencyMs": 27577,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "mst-weighted",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
-        "tp": 5,
+        "tp": 7,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -535,136 +1926,63 @@
         "f1": 1
       },
       "edges": {
-        "tp": 6,
-        "fp": 3,
-        "fn": 4,
-        "precision": 0.6666666666666666,
-        "recall": 0.6,
-        "f1": 0.631578947368421
+        "tp": 11,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": null,
-      "fixes": 7,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 4,
-        "spuriousEdges": 3
-      }
+      "positionError": 0.017030519890052356,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
     },
-    "costUsd": 0.0002138,
-    "latencyMs": 19784
+    "costUsd": 0.01590225,
+    "latencyMs": 133642,
+    "failedCall": false
   },
   {
-    "model": "mistral-small-3.2",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch-photo",
+    "model": "qwen3.6-plus",
+    "fixture": "negative-weights",
+    "tier": "clean",
     "score": {
-      "parsed": true,
+      "parsed": false,
       "nodes": {
-        "tp": 5,
+        "tp": 0,
         "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 5,
-        "fp": 4,
         "fn": 5,
-        "precision": 0.5555555555555556,
-        "recall": 0.5,
-        "f1": 0.5263157894736842
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
       },
-      "weightAccuracy": 0.8,
-      "directedCorrect": true,
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
       "positionError": null,
-      "fixes": 10,
+      "fixes": 14,
       "clean": false,
       "breakdown": {
-        "missingEdges": 5,
-        "spuriousEdges": 4,
-        "wrongWeights": 1
+        "unparseable": 1,
+        "missingNodes": 5,
+        "missingEdges": 9
       }
     },
-    "costUsd": 0.00020355000000000001,
-    "latencyMs": 11639
+    "costUsd": 0.0037566749999999997,
+    "latencyMs": 28415,
+    "failedCall": false
   },
   {
-    "model": "mistral-small-3.2",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 5,
-        "fn": 2,
-        "precision": 0.6153846153846154,
-        "recall": 0.8,
-        "f1": 0.6956521739130435
-      },
-      "weightAccuracy": 0.5,
-      "directedCorrect": true,
-      "positionError": 0.07331999999999998,
-      "fixes": 11,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 5,
-        "wrongWeights": 4
-      }
-    },
-    "costUsd": 0.00026139999999999996,
-    "latencyMs": 15886
-  },
-  {
-    "model": "mistral-small-3.2",
-    "fixture": "dijkstra-clrs",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 4,
-        "fn": 2,
-        "precision": 0.6666666666666666,
-        "recall": 0.8,
-        "f1": 0.7272727272727272
-      },
-      "weightAccuracy": 0.625,
-      "directedCorrect": true,
-      "positionError": 0.054029615061419525,
-      "fixes": 9,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 4,
-        "wrongWeights": 3
-      }
-    },
-    "costUsd": 0.00019655,
-    "latencyMs": 18535
-  },
-  {
-    "model": "mistral-small-3.2",
+    "model": "qwen3.6-plus",
     "fixture": "numeric-labels",
     "tier": "clean",
     "score": {
@@ -678,34 +1996,105 @@
         "f1": 1
       },
       "edges": {
-        "tp": 5,
-        "fp": 3,
-        "fn": 3,
-        "precision": 0.625,
-        "recall": 0.625,
-        "f1": 0.625
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.06948613294692126,
-      "fixes": 6,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 3,
-        "spuriousEdges": 3
-      }
+      "positionError": 0.014378371368857465,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
     },
-    "costUsd": 0.00027765,
-    "latencyMs": 31229
+    "costUsd": 0.0079404,
+    "latencyMs": 63910,
+    "failedCall": false
   },
   {
-    "model": "mistral-small-3.2",
-    "fixture": "numeric-labels",
-    "tier": "photo",
+    "model": "qwen3.6-plus",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 15,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
+      "positionError": null,
+      "fixes": 25,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 10,
+        "missingEdges": 15
+      }
+    },
+    "costUsd": 0.0081354,
+    "latencyMs": 67182,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3.6-plus",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
         "tp": 6,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0327129183958286,
+      "fixes": 2,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.027183975,
+    "latencyMs": 235430,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -715,28 +2104,134 @@
       "edges": {
         "tp": 6,
         "fp": 2,
-        "fn": 2,
+        "fn": 1,
         "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75
+        "recall": 0.8571428571428571,
+        "f1": 0.7999999999999999
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": null,
-      "fixes": 4,
+      "positionError": 0.029998605987337335,
+      "fixes": 3,
       "clean": false,
       "breakdown": {
-        "missingEdges": 2,
+        "missingEdges": 1,
         "spuriousEdges": 2
       }
     },
-    "costUsd": 0.0002424,
-    "latencyMs": 20812
+    "costUsd": 0.00046071999999999997,
+    "latencyMs": 16284,
+    "failedCall": false
   },
   {
-    "model": "mistral-small-3.2",
-    "fixture": "numeric-labels",
-    "tier": "sketch-photo",
+    "model": "qwen3-vl-32b",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 14,
+        "fp": 14,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.023208430714121202,
+      "fixes": 14,
+      "clean": false,
+      "breakdown": {
+        "spuriousEdges": 14
+      }
+    },
+    "costUsd": 0.000727064,
+    "latencyMs": 65445,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002
+      },
+      "weightAccuracy": 0.75,
+      "directedCorrect": true,
+      "positionError": 0.060820007776545316,
+      "fixes": 6,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 2,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.00041620799999999994,
+    "latencyMs": 27836,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.05097566812922287,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.000371592,
+    "latencyMs": 25993,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "flow-network",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
@@ -748,16 +2243,123 @@
         "f1": 1
       },
       "edges": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9
+      },
+      "weightAccuracy": 0.7777777777777778,
+      "directedCorrect": true,
+      "positionError": 0.056471726026647344,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.000434928,
+    "latencyMs": 18679,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
         "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.05000000000000002,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.000426608,
+    "latencyMs": 17605,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
+      "positionError": null,
+      "fixes": 15,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 5,
+        "missingEdges": 10
+      }
+    },
+    "costUsd": 0.0004862,
+    "latencyMs": 19595,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
         "fp": 2,
         "fn": 2,
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75
+        "precision": 0.8181818181818182,
+        "recall": 0.8181818181818182,
+        "f1": 0.8181818181818182
       },
-      "weightAccuracy": 0.8333333333333334,
+      "weightAccuracy": 0.8888888888888888,
       "directedCorrect": true,
-      "positionError": null,
+      "positionError": 0.03267393740007787,
       "fixes": 5,
       "clean": false,
       "breakdown": {
@@ -766,13 +2368,51 @@
         "wrongWeights": 1
       }
     },
-    "costUsd": 0.00022784999999999998,
-    "latencyMs": 32280
+    "costUsd": 0.000493272,
+    "latencyMs": 47897,
+    "failedCall": false
   },
   {
-    "model": "mistral-small-3.2",
+    "model": "qwen3-vl-32b",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8888888888888888,
+        "recall": 0.8888888888888888,
+        "f1": 0.8888888888888888
+      },
+      "weightAccuracy": 0.625,
+      "directedCorrect": true,
+      "positionError": 0.0533440009596929,
+      "fixes": 5,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1,
+        "wrongWeights": 3
+      }
+    },
+    "costUsd": 0.00039665599999999995,
+    "latencyMs": 21835,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
     "fixture": "numeric-labels",
-    "tier": "sketch",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
@@ -791,24 +2431,413 @@
         "recall": 0.875,
         "f1": 0.875
       },
-      "weightAccuracy": 0.8571428571428571,
+      "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.09774797047254301,
+      "positionError": 0.043527474329978895,
+      "fixes": 2,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.00045167199999999997,
+    "latencyMs": 25638,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 14,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.875,
+        "recall": 0.9333333333333333,
+        "f1": 0.9032258064516129
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.043397614018731295,
       "fixes": 3,
       "clean": false,
       "breakdown": {
         "missingEdges": 1,
-        "spuriousEdges": 1,
-        "wrongWeights": 1
+        "spuriousEdges": 2
       }
     },
-    "costUsd": 0.00028065,
-    "latencyMs": 12739
+    "costUsd": 0.0006422,
+    "latencyMs": 90830,
+    "failedCall": false
+  },
+  {
+    "model": "qwen3-vl-32b",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.05000000000000001,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.00029016,
+    "latencyMs": 18225,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.8571428571428571,
+        "f1": 0.75
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.1533060859828434,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 3
+      }
+    },
+    "costUsd": 0.00030235,
+    "latencyMs": 36225,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 14,
+        "fp": 14,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.10286047020547534,
+      "fixes": 14,
+      "clean": false,
+      "breakdown": {
+        "spuriousEdges": 14
+      }
+    },
+    "costUsd": 0.0003968,
+    "latencyMs": 45153,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 6,
+        "fn": 1,
+        "precision": 0.6,
+        "recall": 0.9,
+        "f1": 0.7200000000000001
+      },
+      "weightAccuracy": 0.5555555555555556,
+      "directedCorrect": true,
+      "positionError": 0.05331999999999999,
+      "fixes": 11,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 6,
+        "wrongWeights": 4
+      }
+    },
+    "costUsd": 0.00027555000000000006,
+    "latencyMs": 20163,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.08125635327766012,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00022455,
+    "latencyMs": 18701,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 6,
+        "fn": 4,
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1": 0.5454545454545454
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.07956623971910094,
+      "fixes": 10,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 4,
+        "spuriousEdges": 6
+      }
+    },
+    "costUsd": 0.00027375,
+    "latencyMs": 18887,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.3185128379379139,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00027005,
+    "latencyMs": 22778,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.08469301817520344,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00028419999999999997,
+    "latencyMs": 17567,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 6,
+        "fn": 2,
+        "precision": 0.6,
+        "recall": 0.8181818181818182,
+        "f1": 0.6923076923076923
+      },
+      "weightAccuracy": 0.6666666666666666,
+      "directedCorrect": true,
+      "positionError": 0.084717162760191,
+      "fixes": 11,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 6,
+        "wrongWeights": 3
+      }
+    },
+    "costUsd": 0.000325,
+    "latencyMs": 19029,
+    "failedCall": false
+  },
+  {
+    "model": "mistral-small-3.2",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "f1": 0.823529411764706
+      },
+      "weightAccuracy": 0.5714285714285714,
+      "directedCorrect": true,
+      "positionError": 0.07331999999999998,
+      "fixes": 6,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1,
+        "wrongWeights": 3
+      }
+    },
+    "costUsd": 0.00023755000000000003,
+    "latencyMs": 20319,
+    "failedCall": false
   },
   {
     "model": "mistral-small-3.2",
     "fixture": "numeric-labels",
-    "tier": "slide",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
@@ -829,7 +2858,7 @@
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.07426717253302353,
+      "positionError": 0.09075724385319585,
       "fixes": 6,
       "clean": false,
       "breakdown": {
@@ -837,8 +2866,9 @@
         "spuriousEdges": 3
       }
     },
-    "costUsd": 0.0001968,
-    "latencyMs": 11647
+    "costUsd": 0.0002778,
+    "latencyMs": 7928,
+    "failedCall": false
   },
   {
     "model": "mistral-small-3.2",
@@ -855,173 +2885,35 @@
         "f1": 1
       },
       "edges": {
-        "tp": 13,
+        "tp": 12,
         "fp": 7,
-        "fn": 2,
-        "precision": 0.65,
-        "recall": 0.8666666666666667,
-        "f1": 0.7428571428571429
+        "fn": 3,
+        "precision": 0.631578947368421,
+        "recall": 0.8,
+        "f1": 0.7058823529411765
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.09867718043430809,
-      "fixes": 9,
+      "positionError": 0.07287447711695041,
+      "fixes": 10,
       "clean": false,
       "breakdown": {
-        "missingEdges": 2,
+        "missingEdges": 3,
         "spuriousEdges": 7
       }
     },
-    "costUsd": 0.00035885,
-    "latencyMs": 20000
+    "costUsd": 0.0003562,
+    "latencyMs": 21314,
+    "failedCall": false
   },
   {
     "model": "mistral-small-3.2",
-    "fixture": "petersen",
-    "tier": "photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 10,
-        "fp": 8,
-        "fn": 5,
-        "precision": 0.5555555555555556,
-        "recall": 0.6666666666666666,
-        "f1": 0.606060606060606
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 13,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 5,
-        "spuriousEdges": 8
-      }
-    },
-    "costUsd": 0.0003148,
-    "latencyMs": 19663
-  },
-  {
-    "model": "mistral-small-3.2",
-    "fixture": "petersen",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 11,
-        "fn": 7,
-        "precision": 0.42105263157894735,
-        "recall": 0.5333333333333333,
-        "f1": 0.47058823529411764
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 18,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 7,
-        "spuriousEdges": 11
-      }
-    },
-    "costUsd": 0.00030625,
-    "latencyMs": 17591
-  },
-  {
-    "model": "mistral-small-3.2",
-    "fixture": "petersen",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 11,
-        "fn": 0,
-        "precision": 0.5769230769230769,
-        "recall": 1,
-        "f1": 0.7317073170731707
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.09628369280932937,
-      "fixes": 11,
-      "clean": false,
-      "breakdown": {
-        "spuriousEdges": 11
-      }
-    },
-    "costUsd": 0.00038885000000000005,
-    "latencyMs": 21011
-  },
-  {
-    "model": "mistral-small-3.2",
-    "fixture": "petersen",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 11,
-        "fp": 6,
-        "fn": 4,
-        "precision": 0.6470588235294118,
-        "recall": 0.7333333333333333,
-        "f1": 0.6875
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.08147056226031815,
-      "fixes": 10,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 4,
-        "spuriousEdges": 6
-      }
-    },
-    "costUsd": 0.000263,
-    "latencyMs": 15862
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "dijkstra-clrs",
+    "fixture": "self-loops-parallel",
     "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
-        "tp": 5,
+        "tp": 3,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -1029,179 +2921,35 @@
         "f1": 1
       },
       "edges": {
-        "tp": 8,
+        "tp": 5,
         "fp": 1,
         "fn": 2,
-        "precision": 0.8888888888888888,
-        "recall": 0.8,
-        "f1": 0.8421052631578948
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
       },
-      "weightAccuracy": 0.625,
+      "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.13878822905986826,
-      "fixes": 6,
+      "positionError": 0.03333333333333335,
+      "fixes": 3,
       "clean": false,
       "breakdown": {
         "missingEdges": 2,
-        "spuriousEdges": 1,
-        "wrongWeights": 3
+        "spuriousEdges": 1
       }
     },
-    "costUsd": 0.00044463900000000004,
-    "latencyMs": 4458
+    "costUsd": 0.00018185,
+    "latencyMs": 7975,
+    "failedCall": false
   },
   {
-    "model": "qwen3-vl-8b",
-    "fixture": "dijkstra-clrs",
-    "tier": "photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 7,
-        "fp": 2,
-        "fn": 3,
-        "precision": 0.7777777777777778,
-        "recall": 0.7,
-        "f1": 0.7368421052631577
-      },
-      "weightAccuracy": 0.8571428571428571,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 6,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 3,
-        "spuriousEdges": 2,
-        "wrongWeights": 1
-      }
-    },
-    "costUsd": 0.00041077400000000003,
-    "latencyMs": 4559
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 1,
-        "fn": 2,
-        "precision": 0.8888888888888888,
-        "recall": 0.8,
-        "f1": 0.8421052631578948
-      },
-      "weightAccuracy": 0.75,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 5,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 1,
-        "wrongWeights": 2
-      }
-    },
-    "costUsd": 0.00039655200000000005,
-    "latencyMs": 4710
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 8,
-        "fp": 1,
-        "fn": 2,
-        "precision": 0.8888888888888888,
-        "recall": 0.8,
-        "f1": 0.8421052631578948
-      },
-      "weightAccuracy": 0.625,
-      "directedCorrect": true,
-      "positionError": 0.038016958801649056,
-      "fixes": 6,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 1,
-        "wrongWeights": 3
-      }
-    },
-    "costUsd": 0.000442819,
-    "latencyMs": 4250
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "dijkstra-clrs",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 5,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 7,
-        "fp": 2,
-        "fn": 3,
-        "precision": 0.7777777777777778,
-        "recall": 0.7,
-        "f1": 0.7368421052631577
-      },
-      "weightAccuracy": 0.8571428571428571,
-      "directedCorrect": true,
-      "positionError": 0.07034308608176898,
-      "fixes": 6,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 3,
-        "spuriousEdges": 2,
-        "wrongWeights": 1
-      }
-    },
-    "costUsd": 0.000365209,
-    "latencyMs": 4144
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "numeric-labels",
+    "model": "glm-5.3-flash",
+    "fixture": "dag-topo",
     "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
-        "tp": 6,
+        "tp": 7,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -1211,209 +2959,33 @@
       "edges": {
         "tp": 6,
         "fp": 2,
-        "fn": 2,
+        "fn": 1,
         "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75
-      },
-      "weightAccuracy": 0.8333333333333334,
-      "directedCorrect": true,
-      "positionError": 0.07274924604465967,
-      "fixes": 5,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 2,
-        "wrongWeights": 1
-      }
-    },
-    "costUsd": 0.000486902,
-    "latencyMs": 4600
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "numeric-labels",
-    "tier": "photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 6,
-        "fp": 2,
-        "fn": 2,
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75
+        "recall": 0.8571428571428571,
+        "f1": 0.7999999999999999
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": null,
-      "fixes": 4,
+      "positionError": 0.0021910037444030335,
+      "fixes": 3,
       "clean": false,
       "breakdown": {
-        "missingEdges": 2,
+        "missingEdges": 1,
         "spuriousEdges": 2
       }
     },
-    "costUsd": 0.000471952,
-    "latencyMs": 5537
+    "costUsd": 0.00047605,
+    "latencyMs": 20285,
+    "failedCall": false
   },
   {
-    "model": "qwen3-vl-8b",
-    "fixture": "numeric-labels",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 6,
-        "fp": 2,
-        "fn": 2,
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": null,
-      "fixes": 4,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 2
-      }
-    },
-    "costUsd": 0.00045377800000000006,
-    "latencyMs": 6049
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "numeric-labels",
-    "tier": "sketch",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 6,
-        "fp": 2,
-        "fn": 2,
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75
-      },
-      "weightAccuracy": 0.8333333333333334,
-      "directedCorrect": true,
-      "positionError": 0.04999149775106093,
-      "fixes": 5,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 2,
-        "wrongWeights": 1
-      }
-    },
-    "costUsd": 0.000511927,
-    "latencyMs": 5010
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "numeric-labels",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 6,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 6,
-        "fp": 3,
-        "fn": 2,
-        "precision": 0.6666666666666666,
-        "recall": 0.75,
-        "f1": 0.7058823529411765
-      },
-      "weightAccuracy": 0.8333333333333334,
-      "directedCorrect": true,
-      "positionError": 0.09847386968095655,
-      "fixes": 6,
-      "clean": false,
-      "breakdown": {
-        "missingEdges": 2,
-        "spuriousEdges": 3,
-        "wrongWeights": 1
-      }
-    },
-    "costUsd": 0.00043581200000000005,
-    "latencyMs": 5255
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "petersen",
+    "model": "glm-5.3-flash",
+    "fixture": "dense-crossings",
     "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 10,
-        "fn": 0,
-        "precision": 0.6,
-        "recall": 1,
-        "f1": 0.7499999999999999
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.06710414839605824,
-      "fixes": 10,
-      "clean": false,
-      "breakdown": {
-        "spuriousEdges": 10
-      }
-    },
-    "costUsd": 0.000900042,
-    "latencyMs": 13470
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "petersen",
-    "tier": "photo",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
+        "tp": 8,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -1422,29 +2994,719 @@
       },
       "edges": {
         "tp": 14,
-        "fp": 10,
-        "fn": 1,
-        "precision": 0.5833333333333334,
-        "recall": 0.9333333333333333,
-        "f1": 0.7179487179487181
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
+      "positionError": 0.004066295090390245,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00443305,
+    "latencyMs": 176899,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.004541850760830303,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.004258925,
+    "latencyMs": 175767,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.02296143302686202,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.000330325,
+    "latencyMs": 5371,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.011198755403122679,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.001098175,
+    "latencyMs": 33995,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0025000000000000022,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.001031925,
+    "latencyMs": 34793,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.004408909721000021,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00048005,
+    "latencyMs": 12804,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 11,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.0096692591497913,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.0011730500000000001,
+    "latencyMs": 53593,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": false,
+      "nodes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "edges": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1,
+        "recall": 0,
+        "f1": 0
+      },
+      "weightAccuracy": 0,
+      "directedCorrect": false,
       "positionError": null,
-      "fixes": 11,
+      "fixes": 14,
+      "clean": false,
+      "breakdown": {
+        "unparseable": 1,
+        "missingNodes": 5,
+        "missingEdges": 9
+      }
+    },
+    "costUsd": 0,
+    "latencyMs": 300669,
+    "failedCall": true
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "numeric-labels",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.010954781708158898,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.0010243,
+    "latencyMs": 40941,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "petersen",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.00618751268357052,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.00066755,
+    "latencyMs": 24355,
+    "failedCall": false
+  },
+  {
+    "model": "glm-5.3-flash",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.006095728171281766,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 2,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.000190675,
+    "latencyMs": 5091,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "dag-topo",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.8571428571428571,
+        "f1": 0.7999999999999999
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.06472898877687473,
+      "fixes": 3,
       "clean": false,
       "breakdown": {
         "missingEdges": 1,
-        "spuriousEdges": 10
+        "spuriousEdges": 2
       }
     },
-    "costUsd": 0.0008304920000000001,
-    "latencyMs": 10456
+    "costUsd": 0.0017112000000000002,
+    "latencyMs": 32663,
+    "failedCall": false
   },
   {
-    "model": "qwen3-vl-8b",
+    "model": "gpt-5-nano",
+    "fixture": "dense-crossings",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 7,
+        "fn": 7,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.05604402558457951,
+      "fixes": 14,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 7,
+        "spuriousEdges": 7
+      }
+    },
+    "costUsd": 0.0022313,
+    "latencyMs": 36426,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "dijkstra-clrs",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8333333333333334,
+        "recall": 1,
+        "f1": 0.9090909090909091
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 3,
+        "fn": 3,
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1": 0.7
+      },
+      "weightAccuracy": 0.8571428571428571,
+      "directedCorrect": true,
+      "positionError": 0.05994319719964549,
+      "fixes": 8,
+      "clean": false,
+      "breakdown": {
+        "spuriousNodes": 1,
+        "missingEdges": 3,
+        "spuriousEdges": 3,
+        "wrongWeights": 1
+      }
+    },
+    "costUsd": 0.0028392,
+    "latencyMs": 51855,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "disconnected",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.09164224685332216,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.0014361500000000002,
+    "latencyMs": 22090,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "flow-network",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9
+      },
+      "weightAccuracy": 0.7777777777777778,
+      "directedCorrect": true,
+      "positionError": 0.0650388538709463,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.0018632000000000002,
+    "latencyMs": 30137,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "k33",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.09863753427324666,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.0015681500000000001,
+    "latencyMs": 26126,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "k5",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.07306410200962012,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
+    },
+    "costUsd": 0.0011357,
+    "latencyMs": 16127,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "mst-weighted",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 11,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1,
+        "f1": 0.9565217391304348
+      },
+      "weightAccuracy": 0.8181818181818182,
+      "directedCorrect": true,
+      "positionError": 0.06967934760368096,
+      "fixes": 3,
+      "clean": false,
+      "breakdown": {
+        "spuriousEdges": 1,
+        "wrongWeights": 2
+      }
+    },
+    "costUsd": 0.0019009,
+    "latencyMs": 27601,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "negative-weights",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 8,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.8,
+        "recall": 0.8888888888888888,
+        "f1": 0.8421052631578948
+      },
+      "weightAccuracy": 0.875,
+      "directedCorrect": true,
+      "positionError": 0.07675845788682491,
+      "fixes": 4,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 2,
+        "wrongWeights": 1
+      }
+    },
+    "costUsd": 0.0027868,
+    "latencyMs": 43678,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
+    "fixture": "numeric-labels",
+    "tier": "clean",
+    "score": {
+      "parsed": true,
+      "nodes": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "edges": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875
+      },
+      "weightAccuracy": 1,
+      "directedCorrect": true,
+      "positionError": 0.050830974974470346,
+      "fixes": 2,
+      "clean": false,
+      "breakdown": {
+        "missingEdges": 1,
+        "spuriousEdges": 1
+      }
+    },
+    "costUsd": 0.0024353,
+    "latencyMs": 39628,
+    "failedCall": false
+  },
+  {
+    "model": "gpt-5-nano",
     "fixture": "petersen",
-    "tier": "sketch-photo",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
@@ -1457,32 +3719,31 @@
       },
       "edges": {
         "tp": 15,
-        "fp": 10,
+        "fp": 0,
         "fn": 0,
-        "precision": 0.6,
+        "precision": 1,
         "recall": 1,
-        "f1": 0.7499999999999999
+        "f1": 1
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": null,
-      "fixes": 10,
-      "clean": false,
-      "breakdown": {
-        "spuriousEdges": 10
-      }
+      "positionError": 0.09181020445570359,
+      "fixes": 0,
+      "clean": true,
+      "breakdown": {}
     },
-    "costUsd": 0.000836433,
-    "latencyMs": 10954
+    "costUsd": 0.0029477,
+    "latencyMs": 48594,
+    "failedCall": false
   },
   {
-    "model": "qwen3-vl-8b",
-    "fixture": "petersen",
-    "tier": "sketch",
+    "model": "gpt-5-nano",
+    "fixture": "self-loops-parallel",
+    "tier": "clean",
     "score": {
       "parsed": true,
       "nodes": {
-        "tp": 10,
+        "tp": 3,
         "fp": 0,
         "fn": 0,
         "precision": 1,
@@ -1490,597 +3751,25 @@
         "f1": 1
       },
       "edges": {
-        "tp": 15,
-        "fp": 9,
-        "fn": 0,
-        "precision": 0.625,
-        "recall": 1,
-        "f1": 0.7692307692307693
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
       },
       "weightAccuracy": 1,
       "directedCorrect": true,
-      "positionError": 0.06388207859917107,
-      "fixes": 9,
+      "positionError": 0.07465359351457047,
+      "fixes": 3,
       "clean": false,
       "breakdown": {
-        "spuriousEdges": 9
+        "missingEdges": 2,
+        "spuriousEdges": 1
       }
     },
-    "costUsd": 0.000875927,
-    "latencyMs": 11260
-  },
-  {
-    "model": "qwen3-vl-8b",
-    "fixture": "petersen",
-    "tier": "slide",
-    "score": {
-      "parsed": true,
-      "nodes": {
-        "tp": 10,
-        "fp": 0,
-        "fn": 0,
-        "precision": 1,
-        "recall": 1,
-        "f1": 1
-      },
-      "edges": {
-        "tp": 15,
-        "fp": 10,
-        "fn": 0,
-        "precision": 0.6,
-        "recall": 1,
-        "f1": 0.7499999999999999
-      },
-      "weightAccuracy": 1,
-      "directedCorrect": true,
-      "positionError": 0.10720863455045257,
-      "fixes": 10,
-      "clean": false,
-      "breakdown": {
-        "spuriousEdges": 10
-      }
-    },
-    "costUsd": 0.0007861620000000001,
-    "latencyMs": 11042
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "dijkstra-clrs",
-    "tier": "clean",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 5,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 15,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 5,
-        "missingEdges": 10
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 639
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "dijkstra-clrs",
-    "tier": "photo",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 5,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 15,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 5,
-        "missingEdges": 10
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 476
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 5,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 15,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 5,
-        "missingEdges": 10
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 435
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "dijkstra-clrs",
-    "tier": "sketch",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 5,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 15,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 5,
-        "missingEdges": 10
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 416
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "dijkstra-clrs",
-    "tier": "slide",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 5,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 15,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 5,
-        "missingEdges": 10
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 401
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "numeric-labels",
-    "tier": "clean",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 6,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 8,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 14,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 6,
-        "missingEdges": 8
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 487
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "numeric-labels",
-    "tier": "photo",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 6,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 8,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 14,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 6,
-        "missingEdges": 8
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 737
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "numeric-labels",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 6,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 8,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 14,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 6,
-        "missingEdges": 8
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 725
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "numeric-labels",
-    "tier": "sketch",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 6,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 8,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 14,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 6,
-        "missingEdges": 8
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 471
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "numeric-labels",
-    "tier": "slide",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 6,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 8,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 14,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 6,
-        "missingEdges": 8
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 481
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "petersen",
-    "tier": "clean",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 15,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 25,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 10,
-        "missingEdges": 15
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 483
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "petersen",
-    "tier": "photo",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 15,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 25,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 10,
-        "missingEdges": 15
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 485
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "petersen",
-    "tier": "sketch-photo",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 15,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 25,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 10,
-        "missingEdges": 15
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 484
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "petersen",
-    "tier": "sketch",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 15,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 25,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 10,
-        "missingEdges": 15
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 588
-  },
-  {
-    "model": "qwen3.6-plus",
-    "fixture": "petersen",
-    "tier": "slide",
-    "score": {
-      "parsed": false,
-      "nodes": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 10,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "edges": {
-        "tp": 0,
-        "fp": 0,
-        "fn": 15,
-        "precision": 1,
-        "recall": 0,
-        "f1": 0
-      },
-      "weightAccuracy": 0,
-      "directedCorrect": false,
-      "positionError": null,
-      "fixes": 25,
-      "clean": false,
-      "breakdown": {
-        "unparseable": 1,
-        "missingNodes": 10,
-        "missingEdges": 15
-      }
-    },
-    "costUsd": 0,
-    "latencyMs": 428
+    "costUsd": 0.0013565,
+    "latencyMs": 23821,
+    "failedCall": false
   }
 ]

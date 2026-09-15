@@ -1,9 +1,11 @@
+import { withFallback } from "./fallback.js";
 import { openrouterExtractor } from "./openrouter.js";
 import { lookup } from "./registry.js";
 import type { Extractor } from "./types.js";
 
 export { MODELS, lookup } from "./registry.js";
 export { USER_INSTRUCTION } from "./openrouter.js";
+export { withFallback } from "./fallback.js";
 export type { Extractor, ExtractResult, ModelSpec, Usage } from "./types.js";
 
 /**
@@ -21,4 +23,15 @@ export type { Extractor, ExtractResult, ModelSpec, Usage } from "./types.js";
  */
 export function extractorFor(name: string): Extractor {
   return openrouterExtractor(lookup(name));
+}
+
+/**
+ * What the web app uses: the cheap primary from EXTRACTOR_MODEL, backed by
+ * EXTRACTOR_FALLBACK_MODEL when the primary returns nothing usable. Set the
+ * fallback to an empty string to run the primary alone.
+ */
+export function appExtractor(): Extractor {
+  const primary = extractorFor(process.env.EXTRACTOR_MODEL ?? "glm-5.3-flash");
+  const fallbackName = process.env.EXTRACTOR_FALLBACK_MODEL ?? "opus-5";
+  return fallbackName ? withFallback(primary, extractorFor(fallbackName)) : primary;
 }

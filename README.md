@@ -16,7 +16,7 @@ Early. The extraction eval harness is built and tested; the editor is not.
 
 - [x] Graph schema, provider seam, extraction prompt
 - [x] Eval harness: 12 fixtures x 5 input-quality tiers, scorer, per-tier reporting
-- [ ] Pick a model from eval results
+- [x] Model chosen: GLM 5.3 Flash, Opus 5 as fallback ($0.0014/import)
 - [ ] SVG editor and correction UI
 - [ ] Adjacency matrix / list / edge list views, synced
 - [ ] Algorithm stepping (BFS, DFS, Dijkstra, MST)
@@ -44,7 +44,12 @@ generator against their specs.
 ## How extraction works
 
 Every model routes through OpenRouter, Claude included, so the project needs one
-credential. A screenshot goes to a vision model under a schema-constrained
+credential. The default is GLM 5.3 Flash, which matched Opus 5 on extraction
+quality at 1/43rd the cost, with Opus 5 as a fallback for the rare response that
+fails schema validation -- about $1.40 per thousand imports. See
+[eval/README.md](eval/README.md) for the numbers.
+
+A screenshot goes to a vision model under a schema-constrained
 prompt, and comes back as a `Graph` object: vertices with labels and normalized positions, edges
 with their own ids and optional weights, plus graph-level `directed` and
 `weighted` flags.
