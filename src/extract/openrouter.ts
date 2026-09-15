@@ -29,7 +29,7 @@ export function openrouterExtractor(spec: ModelSpec): Extractor {
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
             "Content-Type": "application/json",
             "HTTP-Referer": process.env.OPENROUTER_SITE_URL ?? "",
-            "X-Title": process.env.OPENROUTER_SITE_NAME ?? "graph-manipulator",
+            "X-Title": process.env.OPENROUTER_SITE_NAME ?? "nodify-edgify",
           },
           body: JSON.stringify({
             model: spec.id,
