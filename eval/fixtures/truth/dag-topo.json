@@ -1,0 +1,100 @@
+{
+  "directed": true,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "shirt",
+      "label": "shirt",
+      "x": 0.2,
+      "y": 0.25
+    },
+    {
+      "id": "tie",
+      "label": "tie",
+      "x": 0.4,
+      "y": 0.3333
+    },
+    {
+      "id": "jacket",
+      "label": "jacket",
+      "x": 0.8,
+      "y": 0.5
+    },
+    {
+      "id": "belt",
+      "label": "belt",
+      "x": 0.4,
+      "y": 0.6667
+    },
+    {
+      "id": "pants",
+      "label": "pants",
+      "x": 0.2,
+      "y": 0.5
+    },
+    {
+      "id": "shoes",
+      "label": "shoes",
+      "x": 0.6,
+      "y": 0.5
+    },
+    {
+      "id": "socks",
+      "label": "socks",
+      "x": 0.2,
+      "y": 0.75
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "shirt",
+      "target": "tie",
+      "weight": null
+    },
+    {
+      "id": "e1",
+      "source": "shirt",
+      "target": "belt",
+      "weight": null
+    },
+    {
+      "id": "e2",
+      "source": "tie",
+      "target": "jacket",
+      "weight": null
+    },
+    {
+      "id": "e3",
+      "source": "belt",
+      "target": "jacket",
+      "weight": null
+    },
+    {
+      "id": "e4",
+      "source": "pants",
+      "target": "belt",
+      "weight": null
+    },
+    {
+      "id": "e5",
+      "source": "pants",
+      "target": "shoes",
+      "weight": null
+    },
+    {
+      "id": "e6",
+      "source": "socks",
+      "target": "shoes",
+      "weight": null
+    }
+  ],
+  "_meta": {
+    "kind": "canonical",
+    "traps": [
+      "arrowheads",
+      "no weights",
+      "layered layout"
+    ]
+  }
+}

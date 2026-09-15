@@ -1,0 +1,99 @@
+{
+  "directed": false,
+  "weighted": true,
+  "nodes": [
+    {
+      "id": "0",
+      "label": "0",
+      "x": 0.5,
+      "y": 0.1129
+    },
+    {
+      "id": "1",
+      "label": "1",
+      "x": 0.8352,
+      "y": 0.3065
+    },
+    {
+      "id": "2",
+      "label": "2",
+      "x": 0.8352,
+      "y": 0.6935
+    },
+    {
+      "id": "3",
+      "label": "3",
+      "x": 0.5,
+      "y": 0.8871
+    },
+    {
+      "id": "4",
+      "label": "4",
+      "x": 0.1648,
+      "y": 0.6935
+    },
+    {
+      "id": "5",
+      "label": "5",
+      "x": 0.1648,
+      "y": 0.3065
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "0",
+      "target": "1",
+      "weight": 4
+    },
+    {
+      "id": "e1",
+      "source": "0",
+      "target": "2",
+      "weight": 3
+    },
+    {
+      "id": "e2",
+      "source": "1",
+      "target": "2",
+      "weight": 2
+    },
+    {
+      "id": "e3",
+      "source": "1",
+      "target": "3",
+      "weight": 5
+    },
+    {
+      "id": "e4",
+      "source": "2",
+      "target": "4",
+      "weight": 6
+    },
+    {
+      "id": "e5",
+      "source": "3",
+      "target": "4",
+      "weight": 1
+    },
+    {
+      "id": "e6",
+      "source": "3",
+      "target": "5",
+      "weight": 7
+    },
+    {
+      "id": "e7",
+      "source": "4",
+      "target": "5",
+      "weight": 8
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "label/weight ambiguity",
+      "0-indexed vertices"
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "directed": false,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "A",
+      "label": "A",
+      "x": 0.5,
+      "y": 0.1129
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "x": 0.7737,
+      "y": 0.2263
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "x": 0.8871,
+      "y": 0.5
+    },
+    {
+      "id": "D",
+      "label": "D",
+      "x": 0.7737,
+      "y": 0.7737
+    },
+    {
+      "id": "E",
+      "label": "E",
+      "x": 0.5,
+      "y": 0.8871
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "x": 0.2263,
+      "y": 0.7737
+    },
+    {
+      "id": "G",
+      "label": "G",
+      "x": 0.1129,
+      "y": 0.5
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "x": 0.2263,
+      "y": 0.2263
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "A",
+      "target": "C",
+      "weight": null
+    },
+    {
+      "id": "e1",
+      "source": "A",
+      "target": "E",
+      "weight": null
+    },
+    {
+      "id": "e2",
+      "source": "A",
+      "target": "G",
+      "weight": null
+    },
+    {
+      "id": "e3",
+      "source": "A",
+      "target": "H",
+      "weight": null
+    },
+    {
+      "id": "e4",
+      "source": "B",
+      "target": "D",
+      "weight": null
+    },
+    {
+      "id": "e5",
+      "source": "B",
+      "target": "F",
+      "weight": null
+    },
+    {
+      "id": "e6",
+      "source": "B",
+      "target": "G",
+      "weight": null
+    },
+    {
+      "id": "e7",
+      "source": "C",
+      "target": "E",
+      "weight": null
+    },
+    {
+      "id": "e8",
+      "source": "C",
+      "target": "F",
+      "weight": null
+    },
+    {
+      "id": "e9",
+      "source": "C",
+      "target": "H",
+      "weight": null
+    },
+    {
+      "id": "e10",
+      "source": "D",
+      "target": "G",
+      "weight": null
+    },
+    {
+      "id": "e11",
+      "source": "D",
+      "target": "H",
+      "weight": null
+    },
+    {
+      "id": "e12",
+      "source": "E",
+      "target": "G",
+      "weight": null
+    },
+    {
+      "id": "e13",
+      "source": "F",
+      "target": "H",
+      "weight": null
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "many crossings",
+      "near-miss edges",
+      "phantom edge risk"
+    ]
+  }
+}

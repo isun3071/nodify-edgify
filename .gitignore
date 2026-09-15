@@ -1,0 +1,35 @@
+# ---- secrets ----
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ---- deps / build ----
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# ---- vercel ----
+.vercel/
+
+# ---- eval artifacts ----
+# Rendered fixtures are regenerable from specs.ts (npm run fixtures), and real
+# screenshots dropped in here are lifted from textbooks and lecture slides,
+# which this repo has no business redistributing. Either way the images don't
+# belong in git. Ground truth in eval/fixtures/truth/ IS committed -- it's what
+# makes scores comparable across runs and across machines.
+eval/fixtures/images/
+# Raw model responses, cached per (model, image, prompt). Regenerable, and
+# they carry API output we don't need in history.
+eval/runs/
+# eval/results/ is committed on purpose -- scores are the point.
+
+# ---- misc ----
+*.log
+npm-debug.log*
+coverage/
+.DS_Store
+.idea/

@@ -1,0 +1,106 @@
+{
+  "directed": true,
+  "weighted": true,
+  "nodes": [
+    {
+      "id": "s",
+      "label": "s",
+      "x": 0.2,
+      "y": 0.5
+    },
+    {
+      "id": "t",
+      "label": "t",
+      "x": 0.4,
+      "y": 0.3333
+    },
+    {
+      "id": "x",
+      "label": "x",
+      "x": 0.6,
+      "y": 0.5
+    },
+    {
+      "id": "y",
+      "label": "y",
+      "x": 0.4,
+      "y": 0.6667
+    },
+    {
+      "id": "z",
+      "label": "z",
+      "x": 0.8,
+      "y": 0.5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "s",
+      "target": "t",
+      "weight": 10
+    },
+    {
+      "id": "e1",
+      "source": "s",
+      "target": "y",
+      "weight": 5
+    },
+    {
+      "id": "e2",
+      "source": "t",
+      "target": "x",
+      "weight": 1
+    },
+    {
+      "id": "e3",
+      "source": "t",
+      "target": "y",
+      "weight": 2
+    },
+    {
+      "id": "e4",
+      "source": "y",
+      "target": "t",
+      "weight": 3
+    },
+    {
+      "id": "e5",
+      "source": "y",
+      "target": "x",
+      "weight": 9
+    },
+    {
+      "id": "e6",
+      "source": "y",
+      "target": "z",
+      "weight": 2
+    },
+    {
+      "id": "e7",
+      "source": "x",
+      "target": "z",
+      "weight": 4
+    },
+    {
+      "id": "e8",
+      "source": "z",
+      "target": "x",
+      "weight": 6
+    },
+    {
+      "id": "e9",
+      "source": "z",
+      "target": "s",
+      "weight": 7
+    }
+  ],
+  "_meta": {
+    "kind": "canonical",
+    "traps": [
+      "antiparallel edges",
+      "arrowheads",
+      "weights"
+    ]
+  }
+}

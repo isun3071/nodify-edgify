@@ -1,0 +1,105 @@
+{
+  "directed": false,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "u1",
+      "label": "u1",
+      "x": 0.25,
+      "y": 0.25
+    },
+    {
+      "id": "u2",
+      "label": "u2",
+      "x": 0.25,
+      "y": 0.5
+    },
+    {
+      "id": "u3",
+      "label": "u3",
+      "x": 0.25,
+      "y": 0.75
+    },
+    {
+      "id": "v1",
+      "label": "v1",
+      "x": 0.75,
+      "y": 0.25
+    },
+    {
+      "id": "v2",
+      "label": "v2",
+      "x": 0.75,
+      "y": 0.5
+    },
+    {
+      "id": "v3",
+      "label": "v3",
+      "x": 0.75,
+      "y": 0.75
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "u1",
+      "target": "v1",
+      "weight": null
+    },
+    {
+      "id": "e1",
+      "source": "u1",
+      "target": "v2",
+      "weight": null
+    },
+    {
+      "id": "e2",
+      "source": "u1",
+      "target": "v3",
+      "weight": null
+    },
+    {
+      "id": "e3",
+      "source": "u2",
+      "target": "v1",
+      "weight": null
+    },
+    {
+      "id": "e4",
+      "source": "u2",
+      "target": "v2",
+      "weight": null
+    },
+    {
+      "id": "e5",
+      "source": "u2",
+      "target": "v3",
+      "weight": null
+    },
+    {
+      "id": "e6",
+      "source": "u3",
+      "target": "v1",
+      "weight": null
+    },
+    {
+      "id": "e7",
+      "source": "u3",
+      "target": "v2",
+      "weight": null
+    },
+    {
+      "id": "e8",
+      "source": "u3",
+      "target": "v3",
+      "weight": null
+    }
+  ],
+  "_meta": {
+    "kind": "canonical",
+    "traps": [
+      "edge crossings",
+      "bipartite layout"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "graph-manipulator",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fixtures": "tsx eval/fixtures/generate.ts",
+    "eval": "tsx eval/run.ts",
+    "test": "tsx eval/score.test.ts && tsx eval/fixtures.test.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0",
+    "dotenv": "^17.0.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

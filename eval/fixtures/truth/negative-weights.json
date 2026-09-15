@@ -1,0 +1,100 @@
+{
+  "directed": true,
+  "weighted": true,
+  "nodes": [
+    {
+      "id": "s",
+      "label": "s",
+      "x": 0.2,
+      "y": 0.5
+    },
+    {
+      "id": "a",
+      "label": "a",
+      "x": 0.4,
+      "y": 0.3333
+    },
+    {
+      "id": "b",
+      "label": "b",
+      "x": 0.4,
+      "y": 0.6667
+    },
+    {
+      "id": "c",
+      "label": "c",
+      "x": 0.8,
+      "y": 0.5
+    },
+    {
+      "id": "d",
+      "label": "d",
+      "x": 0.6,
+      "y": 0.5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "s",
+      "target": "a",
+      "weight": 6
+    },
+    {
+      "id": "e1",
+      "source": "s",
+      "target": "b",
+      "weight": 7
+    },
+    {
+      "id": "e2",
+      "source": "a",
+      "target": "b",
+      "weight": 8
+    },
+    {
+      "id": "e3",
+      "source": "a",
+      "target": "c",
+      "weight": -4
+    },
+    {
+      "id": "e4",
+      "source": "a",
+      "target": "d",
+      "weight": 5
+    },
+    {
+      "id": "e5",
+      "source": "b",
+      "target": "c",
+      "weight": 9
+    },
+    {
+      "id": "e6",
+      "source": "b",
+      "target": "d",
+      "weight": -3
+    },
+    {
+      "id": "e7",
+      "source": "d",
+      "target": "c",
+      "weight": 7
+    },
+    {
+      "id": "e8",
+      "source": "c",
+      "target": "s",
+      "weight": 2
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "minus signs",
+      "negative numbers",
+      "OCR of '-' vs '–'"
+    ]
+  }
+}

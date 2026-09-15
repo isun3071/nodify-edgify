@@ -1,0 +1,112 @@
+{
+  "directed": true,
+  "weighted": true,
+  "nodes": [
+    {
+      "id": "s",
+      "label": "s",
+      "x": 0.2,
+      "y": 0.5
+    },
+    {
+      "id": "v1",
+      "label": "v1",
+      "x": 0.4,
+      "y": 0.3333
+    },
+    {
+      "id": "v2",
+      "label": "v2",
+      "x": 0.4,
+      "y": 0.6667
+    },
+    {
+      "id": "v3",
+      "label": "v3",
+      "x": 0.6,
+      "y": 0.3333
+    },
+    {
+      "id": "v4",
+      "label": "v4",
+      "x": 0.6,
+      "y": 0.6667
+    },
+    {
+      "id": "t",
+      "label": "t",
+      "x": 0.8,
+      "y": 0.5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "s",
+      "target": "v1",
+      "weight": 16
+    },
+    {
+      "id": "e1",
+      "source": "s",
+      "target": "v2",
+      "weight": 13
+    },
+    {
+      "id": "e2",
+      "source": "v1",
+      "target": "v2",
+      "weight": 10
+    },
+    {
+      "id": "e3",
+      "source": "v2",
+      "target": "v1",
+      "weight": 4
+    },
+    {
+      "id": "e4",
+      "source": "v1",
+      "target": "v3",
+      "weight": 12
+    },
+    {
+      "id": "e5",
+      "source": "v3",
+      "target": "v2",
+      "weight": 9
+    },
+    {
+      "id": "e6",
+      "source": "v2",
+      "target": "v4",
+      "weight": 14
+    },
+    {
+      "id": "e7",
+      "source": "v4",
+      "target": "v3",
+      "weight": 7
+    },
+    {
+      "id": "e8",
+      "source": "v3",
+      "target": "t",
+      "weight": 20
+    },
+    {
+      "id": "e9",
+      "source": "v4",
+      "target": "t",
+      "weight": 4
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "antiparallel pairs",
+      "curved duplicate edges",
+      "asymmetric weights"
+    ]
+  }
+}

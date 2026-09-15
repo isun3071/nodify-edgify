@@ -1,0 +1,123 @@
+{
+  "directed": false,
+  "weighted": true,
+  "nodes": [
+    {
+      "id": "A",
+      "label": "A",
+      "x": 0.5,
+      "y": 0.1129
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "x": 0.8026,
+      "y": 0.2586
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "x": 0.8774,
+      "y": 0.5861
+    },
+    {
+      "id": "D",
+      "label": "D",
+      "x": 0.668,
+      "y": 0.8488
+    },
+    {
+      "id": "E",
+      "label": "E",
+      "x": 0.332,
+      "y": 0.8488
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "x": 0.1226,
+      "y": 0.5861
+    },
+    {
+      "id": "G",
+      "label": "G",
+      "x": 0.1974,
+      "y": 0.2586
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "A",
+      "target": "B",
+      "weight": 7
+    },
+    {
+      "id": "e1",
+      "source": "A",
+      "target": "D",
+      "weight": 5
+    },
+    {
+      "id": "e2",
+      "source": "B",
+      "target": "C",
+      "weight": 8
+    },
+    {
+      "id": "e3",
+      "source": "B",
+      "target": "D",
+      "weight": 9
+    },
+    {
+      "id": "e4",
+      "source": "B",
+      "target": "E",
+      "weight": 7
+    },
+    {
+      "id": "e5",
+      "source": "C",
+      "target": "E",
+      "weight": 5
+    },
+    {
+      "id": "e6",
+      "source": "D",
+      "target": "E",
+      "weight": 15
+    },
+    {
+      "id": "e7",
+      "source": "D",
+      "target": "F",
+      "weight": 6
+    },
+    {
+      "id": "e8",
+      "source": "E",
+      "target": "F",
+      "weight": 8
+    },
+    {
+      "id": "e9",
+      "source": "E",
+      "target": "G",
+      "weight": 9
+    },
+    {
+      "id": "e10",
+      "source": "F",
+      "target": "G",
+      "weight": 11
+    }
+  ],
+  "_meta": {
+    "kind": "canonical",
+    "traps": [
+      "weights on undirected edges",
+      "no arrowheads"
+    ]
+  }
+}

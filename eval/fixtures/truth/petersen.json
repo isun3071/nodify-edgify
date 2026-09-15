@@ -1,0 +1,166 @@
+{
+  "directed": false,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "0",
+      "label": "0",
+      "x": 0.5,
+      "y": 0.0871
+    },
+    {
+      "id": "1",
+      "label": "1",
+      "x": 0.8927,
+      "y": 0.3724
+    },
+    {
+      "id": "2",
+      "label": "2",
+      "x": 0.7427,
+      "y": 0.834
+    },
+    {
+      "id": "3",
+      "label": "3",
+      "x": 0.2573,
+      "y": 0.834
+    },
+    {
+      "id": "4",
+      "label": "4",
+      "x": 0.1073,
+      "y": 0.3724
+    },
+    {
+      "id": "5",
+      "label": "5",
+      "x": 0.5,
+      "y": 0.3101
+    },
+    {
+      "id": "6",
+      "label": "6",
+      "x": 0.6806,
+      "y": 0.4413
+    },
+    {
+      "id": "7",
+      "label": "7",
+      "x": 0.6116,
+      "y": 0.6537
+    },
+    {
+      "id": "8",
+      "label": "8",
+      "x": 0.3884,
+      "y": 0.6537
+    },
+    {
+      "id": "9",
+      "label": "9",
+      "x": 0.3194,
+      "y": 0.4413
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "0",
+      "target": "1",
+      "weight": null
+    },
+    {
+      "id": "e1",
+      "source": "1",
+      "target": "2",
+      "weight": null
+    },
+    {
+      "id": "e2",
+      "source": "2",
+      "target": "3",
+      "weight": null
+    },
+    {
+      "id": "e3",
+      "source": "3",
+      "target": "4",
+      "weight": null
+    },
+    {
+      "id": "e4",
+      "source": "4",
+      "target": "0",
+      "weight": null
+    },
+    {
+      "id": "e5",
+      "source": "0",
+      "target": "5",
+      "weight": null
+    },
+    {
+      "id": "e6",
+      "source": "1",
+      "target": "6",
+      "weight": null
+    },
+    {
+      "id": "e7",
+      "source": "2",
+      "target": "7",
+      "weight": null
+    },
+    {
+      "id": "e8",
+      "source": "3",
+      "target": "8",
+      "weight": null
+    },
+    {
+      "id": "e9",
+      "source": "4",
+      "target": "9",
+      "weight": null
+    },
+    {
+      "id": "e10",
+      "source": "5",
+      "target": "7",
+      "weight": null
+    },
+    {
+      "id": "e11",
+      "source": "6",
+      "target": "8",
+      "weight": null
+    },
+    {
+      "id": "e12",
+      "source": "7",
+      "target": "9",
+      "weight": null
+    },
+    {
+      "id": "e13",
+      "source": "8",
+      "target": "5",
+      "weight": null
+    },
+    {
+      "id": "e14",
+      "source": "9",
+      "target": "6",
+      "weight": null
+    }
+  ],
+  "_meta": {
+    "kind": "canonical",
+    "traps": [
+      "near-miss crossings",
+      "inner star edges",
+      "10 nodes 15 edges"
+    ]
+  }
+}

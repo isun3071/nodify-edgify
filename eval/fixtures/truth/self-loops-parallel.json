@@ -1,0 +1,76 @@
+{
+  "directed": true,
+  "weighted": true,
+  "nodes": [
+    {
+      "id": "q0",
+      "label": "q0",
+      "x": 0.25,
+      "y": 0.5
+    },
+    {
+      "id": "q1",
+      "label": "q1",
+      "x": 0.5,
+      "y": 0.5
+    },
+    {
+      "id": "q2",
+      "label": "q2",
+      "x": 0.75,
+      "y": 0.5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "q0",
+      "target": "q0",
+      "weight": 1
+    },
+    {
+      "id": "e1",
+      "source": "q0",
+      "target": "q1",
+      "weight": 2
+    },
+    {
+      "id": "e2",
+      "source": "q0",
+      "target": "q1",
+      "weight": 5
+    },
+    {
+      "id": "e3",
+      "source": "q1",
+      "target": "q1",
+      "weight": 3
+    },
+    {
+      "id": "e4",
+      "source": "q1",
+      "target": "q2",
+      "weight": 4
+    },
+    {
+      "id": "e5",
+      "source": "q2",
+      "target": "q0",
+      "weight": 6
+    },
+    {
+      "id": "e6",
+      "source": "q2",
+      "target": "q2",
+      "weight": 7
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "self-loops",
+      "parallel edges",
+      "multiset edge counting"
+    ]
+  }
+}

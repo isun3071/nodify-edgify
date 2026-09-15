@@ -1,0 +1,88 @@
+{
+  "directed": false,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "A",
+      "label": "A",
+      "x": 0.2347,
+      "y": 0.2554
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "x": 0.1353,
+      "y": 0.6223
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "x": 0.3341,
+      "y": 0.6223
+    },
+    {
+      "id": "D",
+      "label": "D",
+      "x": 0.6148,
+      "y": 0.2554
+    },
+    {
+      "id": "E",
+      "label": "E",
+      "x": 0.7142,
+      "y": 0.6223
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "x": 0.5154,
+      "y": 0.6223
+    },
+    {
+      "id": "G",
+      "label": "G",
+      "x": 0.8801,
+      "y": 0.5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "A",
+      "target": "B",
+      "weight": null
+    },
+    {
+      "id": "e1",
+      "source": "B",
+      "target": "C",
+      "weight": null
+    },
+    {
+      "id": "e2",
+      "source": "C",
+      "target": "A",
+      "weight": null
+    },
+    {
+      "id": "e3",
+      "source": "D",
+      "target": "E",
+      "weight": null
+    },
+    {
+      "id": "e4",
+      "source": "E",
+      "target": "F",
+      "weight": null
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "disconnected components",
+      "isolated vertex",
+      "no-edge node"
+    ]
+  }
+}
