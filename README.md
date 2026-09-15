@@ -31,7 +31,7 @@ Needs Node 22+, `rsvg-convert`, and ImageMagick 7.
 
 ```bash
 npm install
-cp .env.example .env.local     # add ANTHROPIC_API_KEY + OPENROUTER_API_KEY
+cp .env.example .env           # add OPENROUTER_API_KEY
 npm run fixtures               # render 12 fixtures x 5 quality tiers
 npm test                       # scorer + fixture invariants, no API calls
 npm run eval                   # score every model on every fixture
@@ -43,8 +43,9 @@ generator against their specs.
 
 ## How extraction works
 
-A screenshot goes to a vision model under a schema-constrained prompt, and comes
-back as a `Graph` object: vertices with labels and normalized positions, edges
+Every model routes through OpenRouter, Claude included, so the project needs one
+credential. A screenshot goes to a vision model under a schema-constrained
+prompt, and comes back as a `Graph` object: vertices with labels and normalized positions, edges
 with their own ids and optional weights, plus graph-level `directed` and
 `weighted` flags.
 

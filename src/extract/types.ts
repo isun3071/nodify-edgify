@@ -28,8 +28,7 @@ export interface Extractor {
 export interface ModelSpec {
   /** Key used on the command line and in results. */
   name: string;
-  provider: "anthropic" | "openrouter";
-  /** Provider-side model id. */
+  /** OpenRouter slug, e.g. "anthropic/claude-opus-5". */
   id: string;
   /** USD per million tokens. */
   inputPerMTok: number;

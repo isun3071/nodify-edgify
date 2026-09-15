@@ -4,7 +4,7 @@ Answers one question: **which model can read a course graph off a screenshot
 accurately enough that fixing its output beats redrawing the graph by hand?**
 
 ```bash
-cp .env.example .env.local     # fill in ANTHROPIC_API_KEY + OPENROUTER_API_KEY
+cp .env.example .env           # fill in OPENROUTER_API_KEY
 npm run fixtures               # render the 12 fixtures
 npm test                       # scorer self-test, no API calls
 npm run eval                   # all models, all fixtures, all tiers
