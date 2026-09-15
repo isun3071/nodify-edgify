@@ -5,7 +5,7 @@ accurately enough that fixing its output beats redrawing the graph by hand?**
 
 ```bash
 cp .env.example .env           # fill in OPENROUTER_API_KEY
-npm run fixtures               # render the 12 fixtures
+npm run fixtures               # render the 14 fixtures x 5 tiers
 npm test                       # scorer self-test, no API calls
 npm run eval                   # all models, all fixtures, all tiers
 npm run eval -- --tiers clean,slide          # skip the hard input tiers
@@ -36,7 +36,7 @@ Comparison rules worth knowing:
 
 ## Results (round 2, Sept 2026)
 
-9 models x 12 fixtures at the `clean` tier. `fixes` and `edgeF1` are measured
+9 models x 12 fixtures at the `clean` tier (two automata fixtures were added after this run). `fixes` and `edgeF1` are measured
 only over calls that reached the model; `failed` counts rate limits, timeouts
 and rejected requests separately, because averaging those in as zeros made two
 capable models look worthless in round one.
@@ -129,6 +129,8 @@ built to break one specific thing each:
 | `negative-weights` | minus signs |
 | `flow-network` | antiparallel pairs with different capacities |
 | `dense-crossings` | many crossings, phantom-edge risk |
+| `dfa-binary` | transition symbols, double circle, start arrow, start state that also accepts |
+| `nfa-multisymbol` | comma-separated symbol sets, two accepting states |
 
 Ground truth is exact by construction: `specs.ts` produces both the rendered
 image and the truth JSON, so there is no transcription to get wrong.
@@ -146,10 +148,16 @@ which matters, because the scorer gets rewritten a few times before "a fix"
 settles down. Only a changed prompt or a new model spends money. Failed calls
 are not cached.
 
-A full run is 12 fixtures x 5 tiers x 5 models = 300 calls: roughly $1.50 for
-Opus 5 and a few cents for the four cheap models combined. `--tiers clean,slide`
-cuts that to 120 calls while still covering the inputs most users will actually
-paste in.
+A full run is 14 fixtures x 5 tiers x 9 models = 630 calls. `--tiers clean` cuts
+that to 126 while still covering the inputs most users actually paste in, and is
+the setting worth defaulting to -- see "what round one got wrong" below. Cold,
+that sweep costs roughly $1, nearly all of it Opus and Sonnet; the GLM column is
+about a tenth of a cent per graph.
+
+The runner goes wide across models and stays sequential within each, so nine
+models finish in roughly the wall-clock of one. Fanning out inside a model
+instead would multiply requests against a single upstream provider, which is
+how mistral-small lost 8 of 12 calls to rate limits in round two.
 
 ## Adding a model
 

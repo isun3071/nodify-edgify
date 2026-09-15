@@ -2,28 +2,41 @@
 
 Screenshot a graph, get an editable one.
 
-Algorithms courses run on graphs, and working with them means redrawing the same
-twelve-node weighted digraph every time you want to try something. Existing
-online graph editors are either algorithm demos you can't easily feed your own
-graph into, or general-purpose network tools aimed at somebody else's problem.
+Photograph or screenshot a graph from a problem set, lecture slide or textbook,
+and have it editable in a click or two -- instead of sitting down and rebuilding
+the whole thing by hand.
 
-So: paste a screenshot of the graph from your problem set, get back a real
-graph you can drag, edit, export as an adjacency matrix, and run BFS on.
+That is the whole point, and it is the one thing no existing tool does. Plenty
+of them simulate algorithms better than this ever will: VisuAlgo, CS Academy and
+learngraphtheory are good at stepping through Dijkstra. None of them will read
+your graph out of a picture. Getting the graph *in* is the hard part, and it is
+the part everyone re-does by hand.
+
+Measured over the 12 fixtures of round two: **0.5 fixes per imported graph.** "One or two edits" is
+the result, not the aspiration -- see [eval/README.md](eval/README.md).
 
 ## Status
 
 Early. The extraction eval harness is built and tested; the editor is not.
 
 - [x] Graph schema, provider seam, extraction prompt
-- [x] Eval harness: 12 fixtures x 5 input-quality tiers, scorer, per-tier reporting
+- [x] Eval harness: 14 fixtures x 5 input-quality tiers, scorer, per-tier reporting
 - [x] Model chosen: GLM 5.3 Flash, Opus 5 as fallback ($0.0014/import)
-- [ ] SVG editor and correction UI
-- [ ] Adjacency matrix / list / edge list views, synced
-- [ ] Algorithm stepping (BFS, DFS, Dijkstra, MST)
+- [x] Automata notation in the schema (start/accept states, transition symbols)
+- [ ] SVG editor and correction UI -- the critical path
+- [ ] Export: TikZ, adjacency matrix / list, edge list, DOT
+- [ ] Export targets for tools that simulate well (VisuAlgo, CS Academy edge lists)
+- [ ] Maybe: a token BFS/DFS, only to sanity-check that an import is right
 
 The eval comes first on purpose. Import accuracy decides whether the headline
 feature is worth building at all, and it's cheap to measure before committing to
 an editor around it.
+
+**Algorithm stepping is deliberately not a goal.** Other tools do it better, and
+competing there would mean building a worse VisuAlgo. This is the on-ramp: it
+gets your graph out of a picture and into whatever you actually use. That makes
+export half the product rather than an afterthought -- TikZ for writing up
+solutions, edge lists for the simulators, adjacency structures for code.
 
 ## Quickstart
 
@@ -32,7 +45,7 @@ Needs Node 22+, `rsvg-convert`, and ImageMagick 7.
 ```bash
 npm install
 cp .env.example .env           # add OPENROUTER_API_KEY
-npm run fixtures               # render 12 fixtures x 5 quality tiers
+npm run fixtures               # render 14 fixtures x 5 quality tiers
 npm test                       # scorer + fixture invariants, no API calls
 npm run eval                   # score every model on every fixture
 npm run eval -- --tiers clean,slide --models mistral-small-3.2
