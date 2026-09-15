@@ -20,7 +20,21 @@ export const NodeSchema = z.object({
   id: z.string().describe("Stable identifier, unique within the graph."),
   label: z
     .string()
-    .describe("Text drawn inside or beside the vertex, e.g. 'A', 's', '0'."),
+    .describe("Text drawn inside or beside the vertex, e.g. 'A', 's', 'q0'."),
+  // Two independent flags, not one enum: a DFA's start state is very often also
+  // an accepting state, and an enum cannot say both.
+  start: z
+    .boolean()
+    .describe(
+      "Automata notation: true if an arrow points into this vertex from no " +
+        "other vertex (the start state). False for ordinary graphs.",
+    ),
+  accept: z
+    .boolean()
+    .describe(
+      "Automata notation: true if this vertex is drawn as a double circle " +
+        "(an accepting state). False for ordinary graphs.",
+    ),
   x: z.number().min(0).max(1).describe("Center, fraction of image width."),
   y: z.number().min(0).max(1).describe("Center, fraction of image height, top-down."),
 });
@@ -33,6 +47,14 @@ export const EdgeSchema = z.object({
     .number()
     .nullable()
     .describe("Numeric label on the edge, or null if unlabeled. May be negative."),
+  label: z
+    .string()
+    .nullable()
+    .describe(
+      "Non-numeric label on the edge: an automaton's transition symbols " +
+        "('a', '0,1', 'a/b->R'). Null when the edge carries no symbol. An edge " +
+        "labeled with a plain number uses `weight` instead, not this.",
+    ),
 });
 
 export const GraphSchema = z.object({

@@ -5,48 +5,64 @@
     {
       "id": "A",
       "label": "A",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.1129
     },
     {
       "id": "B",
       "label": "B",
+      "start": false,
+      "accept": false,
       "x": 0.7737,
       "y": 0.2263
     },
     {
       "id": "C",
       "label": "C",
+      "start": false,
+      "accept": false,
       "x": 0.8871,
       "y": 0.5
     },
     {
       "id": "D",
       "label": "D",
+      "start": false,
+      "accept": false,
       "x": 0.7737,
       "y": 0.7737
     },
     {
       "id": "E",
       "label": "E",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.8871
     },
     {
       "id": "F",
       "label": "F",
+      "start": false,
+      "accept": false,
       "x": 0.2263,
       "y": 0.7737
     },
     {
       "id": "G",
       "label": "G",
+      "start": false,
+      "accept": false,
       "x": 0.1129,
       "y": 0.5
     },
     {
       "id": "H",
       "label": "H",
+      "start": false,
+      "accept": false,
       "x": 0.2263,
       "y": 0.2263
     }
@@ -56,85 +72,99 @@
       "id": "e0",
       "source": "A",
       "target": "C",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e1",
       "source": "A",
       "target": "E",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e2",
       "source": "A",
       "target": "G",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e3",
       "source": "A",
       "target": "H",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e4",
       "source": "B",
       "target": "D",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e5",
       "source": "B",
       "target": "F",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e6",
       "source": "B",
       "target": "G",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e7",
       "source": "C",
       "target": "E",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e8",
       "source": "C",
       "target": "F",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e9",
       "source": "C",
       "target": "H",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e10",
       "source": "D",
       "target": "G",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e11",
       "source": "D",
       "target": "H",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e12",
       "source": "E",
       "target": "G",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e13",
       "source": "F",
       "target": "H",
-      "weight": null
+      "weight": null,
+      "label": null
     }
   ],
   "_meta": {

@@ -5,36 +5,48 @@
     {
       "id": "0",
       "label": "0",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.1129
     },
     {
       "id": "1",
       "label": "1",
+      "start": false,
+      "accept": false,
       "x": 0.8352,
       "y": 0.3065
     },
     {
       "id": "2",
       "label": "2",
+      "start": false,
+      "accept": false,
       "x": 0.8352,
       "y": 0.6935
     },
     {
       "id": "3",
       "label": "3",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.8871
     },
     {
       "id": "4",
       "label": "4",
+      "start": false,
+      "accept": false,
       "x": 0.1648,
       "y": 0.6935
     },
     {
       "id": "5",
       "label": "5",
+      "start": false,
+      "accept": false,
       "x": 0.1648,
       "y": 0.3065
     }
@@ -44,49 +56,57 @@
       "id": "e0",
       "source": "0",
       "target": "1",
-      "weight": 4
+      "weight": 4,
+      "label": null
     },
     {
       "id": "e1",
       "source": "0",
       "target": "2",
-      "weight": 3
+      "weight": 3,
+      "label": null
     },
     {
       "id": "e2",
       "source": "1",
       "target": "2",
-      "weight": 2
+      "weight": 2,
+      "label": null
     },
     {
       "id": "e3",
       "source": "1",
       "target": "3",
-      "weight": 5
+      "weight": 5,
+      "label": null
     },
     {
       "id": "e4",
       "source": "2",
       "target": "4",
-      "weight": 6
+      "weight": 6,
+      "label": null
     },
     {
       "id": "e5",
       "source": "3",
       "target": "4",
-      "weight": 1
+      "weight": 1,
+      "label": null
     },
     {
       "id": "e6",
       "source": "3",
       "target": "5",
-      "weight": 7
+      "weight": 7,
+      "label": null
     },
     {
       "id": "e7",
       "source": "4",
       "target": "5",
-      "weight": 8
+      "weight": 8,
+      "label": null
     }
   ],
   "_meta": {

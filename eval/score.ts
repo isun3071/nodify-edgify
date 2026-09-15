@@ -15,6 +15,10 @@ export interface Score {
   edges: PRF;
   /** Of edges matched by endpoints, the fraction carrying the right weight. */
   weightAccuracy: number;
+  /** Of edges matched by endpoints, the fraction carrying the right symbol. */
+  symbolAccuracy: number;
+  /** Vertices whose start/accept role was read wrong. */
+  wrongRoles: number;
   directedCorrect: boolean;
   /** Mean distance between matched node centers, in fractions of image size. */
   positionError: number;
@@ -54,6 +58,8 @@ export function zeroScore(truth: Graph): Score {
     nodes: prf(0, 0, n),
     edges: prf(0, 0, e),
     weightAccuracy: 0,
+    symbolAccuracy: 0,
+    wrongRoles: 0,
     directedCorrect: false,
     positionError: NaN,
     fixes: n + e,
@@ -90,6 +96,7 @@ export function score(truth: Graph, got: Graph): Score {
   const gotEdges = counted(got.edges, (e) => edgeKey(e, gotMap, truth.directed));
 
   let eTp = 0, eFp = 0, eFn = 0, weightMatches = 0, weightChecked = 0;
+  let labelMatches = 0, labelChecked = 0;
   for (const [key, ts] of truthEdges) {
     const gs = gotEdges.get(key) ?? [];
     const matched = Math.min(ts.length, gs.length);
@@ -113,6 +120,23 @@ export function score(truth: Graph, got: Graph): Score {
     }
     weightChecked += matched;
     weightMatches += Math.min(agreed, matched);
+
+    // Edge symbols ("a", "0,1", "a/b->R") compare the same way. Kept apart from
+    // weights because they are different edits to make and different things to
+    // get wrong: a weighted graph carries numbers, an automaton carries symbols,
+    // and a model that confuses the two should be visible as such.
+    const symbolPool = new Map<string | null, number>();
+    for (const e of ts) symbolPool.set(e.label, (symbolPool.get(e.label) ?? 0) + 1);
+    let symbolsAgreed = 0;
+    for (const e of gs) {
+      const available = symbolPool.get(e.label) ?? 0;
+      if (available > 0) {
+        symbolPool.set(e.label, available - 1);
+        symbolsAgreed++;
+      }
+    }
+    labelChecked += matched;
+    labelMatches += Math.min(symbolsAgreed, matched);
   }
   for (const [key, gs] of gotEdges) {
     eFp += Math.max(0, gs.length - (truthEdges.get(key)?.length ?? 0));
@@ -122,6 +146,25 @@ export function score(truth: Graph, got: Graph): Score {
 
   const wrongWeights = weightChecked - weightMatches;
   if (wrongWeights) breakdown.wrongWeights = wrongWeights;
+
+  const wrongSymbols = labelChecked - labelMatches;
+  if (wrongSymbols) breakdown.wrongSymbols = wrongSymbols;
+
+  // Start and accept states are part of what an automaton IS -- a diagram with
+  // the accepting states wrong is the wrong automaton, however good its edges.
+  const gotRoleByLabel = new Map(
+    got.nodes.map((n) => [normalizeLabel(n.label), n]),
+  );
+  let wrongRoles = 0;
+  for (const t of truth.nodes) {
+    const g = gotRoleByLabel.get(normalizeLabel(t.label));
+    if (!g) continue; // already charged as a missing node
+    // One fix per wrong flag: marking a state accepting and marking it the
+    // start state are separate edits, and a state can legitimately be both.
+    if (g.start !== t.start) wrongRoles++;
+    if (g.accept !== t.accept) wrongRoles++;
+  }
+  if (wrongRoles) breakdown.wrongRoles = wrongRoles;
 
   const directedCorrect = truth.directed === got.directed;
   if (!directedCorrect) breakdown.directedness = 1;
@@ -138,13 +181,16 @@ export function score(truth: Graph, got: Graph): Score {
     : NaN;
 
   const fixes =
-    nFn + nFp + eFn + eFp + wrongWeights + (directedCorrect ? 0 : 1);
+    nFn + nFp + eFn + eFp + wrongWeights + wrongSymbols + wrongRoles +
+    (directedCorrect ? 0 : 1);
 
   return {
     parsed: true,
     nodes: prf(nTp, nFp, nFn),
     edges: prf(eTp, eFp, eFn),
     weightAccuracy: weightChecked === 0 ? 1 : weightMatches / weightChecked,
+    symbolAccuracy: labelChecked === 0 ? 1 : labelMatches / labelChecked,
+    wrongRoles,
     directedCorrect,
     positionError,
     fixes,

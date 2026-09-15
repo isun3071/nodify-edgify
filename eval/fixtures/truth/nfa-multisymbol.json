@@ -1,0 +1,83 @@
+{
+  "directed": true,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "s0",
+      "label": "s0",
+      "start": true,
+      "accept": false,
+      "x": 0.25,
+      "y": 0.5
+    },
+    {
+      "id": "s1",
+      "label": "s1",
+      "start": false,
+      "accept": false,
+      "x": 0.5,
+      "y": 0.5
+    },
+    {
+      "id": "s2",
+      "label": "s2",
+      "start": false,
+      "accept": true,
+      "x": 0.75,
+      "y": 0.3333
+    },
+    {
+      "id": "s3",
+      "label": "s3",
+      "start": false,
+      "accept": true,
+      "x": 0.75,
+      "y": 0.6667
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "s0",
+      "target": "s0",
+      "weight": null,
+      "label": "a,b"
+    },
+    {
+      "id": "e1",
+      "source": "s0",
+      "target": "s1",
+      "weight": null,
+      "label": "a"
+    },
+    {
+      "id": "e2",
+      "source": "s1",
+      "target": "s2",
+      "weight": null,
+      "label": "b"
+    },
+    {
+      "id": "e3",
+      "source": "s1",
+      "target": "s3",
+      "weight": null,
+      "label": "e"
+    },
+    {
+      "id": "e4",
+      "source": "s2",
+      "target": "s2",
+      "weight": null,
+      "label": "a,b"
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "comma-separated symbols",
+      "two accept states",
+      "epsilon transition"
+    ]
+  }
+}

@@ -5,42 +5,56 @@
     {
       "id": "shirt",
       "label": "shirt",
+      "start": false,
+      "accept": false,
       "x": 0.2,
       "y": 0.25
     },
     {
       "id": "tie",
       "label": "tie",
+      "start": false,
+      "accept": false,
       "x": 0.4,
       "y": 0.3333
     },
     {
       "id": "jacket",
       "label": "jacket",
+      "start": false,
+      "accept": false,
       "x": 0.8,
       "y": 0.5
     },
     {
       "id": "belt",
       "label": "belt",
+      "start": false,
+      "accept": false,
       "x": 0.4,
       "y": 0.6667
     },
     {
       "id": "pants",
       "label": "pants",
+      "start": false,
+      "accept": false,
       "x": 0.2,
       "y": 0.5
     },
     {
       "id": "shoes",
       "label": "shoes",
+      "start": false,
+      "accept": false,
       "x": 0.6,
       "y": 0.5
     },
     {
       "id": "socks",
       "label": "socks",
+      "start": false,
+      "accept": false,
       "x": 0.2,
       "y": 0.75
     }
@@ -50,43 +64,50 @@
       "id": "e0",
       "source": "shirt",
       "target": "tie",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e1",
       "source": "shirt",
       "target": "belt",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e2",
       "source": "tie",
       "target": "jacket",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e3",
       "source": "belt",
       "target": "jacket",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e4",
       "source": "pants",
       "target": "belt",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e5",
       "source": "pants",
       "target": "shoes",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e6",
       "source": "socks",
       "target": "shoes",
-      "weight": null
+      "weight": null,
+      "label": null
     }
   ],
   "_meta": {

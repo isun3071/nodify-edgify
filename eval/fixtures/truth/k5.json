@@ -5,30 +5,40 @@
     {
       "id": "A",
       "label": "A",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.1129
     },
     {
       "id": "B",
       "label": "B",
+      "start": false,
+      "accept": false,
       "x": 0.8682,
       "y": 0.3804
     },
     {
       "id": "C",
       "label": "C",
+      "start": false,
+      "accept": false,
       "x": 0.7275,
       "y": 0.8132
     },
     {
       "id": "D",
       "label": "D",
+      "start": false,
+      "accept": false,
       "x": 0.2725,
       "y": 0.8132
     },
     {
       "id": "E",
       "label": "E",
+      "start": false,
+      "accept": false,
       "x": 0.1318,
       "y": 0.3804
     }
@@ -38,61 +48,71 @@
       "id": "e0",
       "source": "A",
       "target": "B",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e1",
       "source": "A",
       "target": "C",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e2",
       "source": "A",
       "target": "D",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e3",
       "source": "A",
       "target": "E",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e4",
       "source": "B",
       "target": "C",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e5",
       "source": "B",
       "target": "D",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e6",
       "source": "B",
       "target": "E",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e7",
       "source": "C",
       "target": "D",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e8",
       "source": "C",
       "target": "E",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e9",
       "source": "D",
       "target": "E",
-      "weight": null
+      "weight": null,
+      "label": null
     }
   ],
   "_meta": {

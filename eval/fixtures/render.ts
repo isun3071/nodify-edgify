@@ -10,6 +10,7 @@ interface Placed {
   source: string;
   target: string;
   weight: number | null;
+  symbol: string | undefined;
   curvature: number;
 }
 
@@ -53,10 +54,10 @@ function place(spec: FixtureSpec): Placed[] {
   const out: Placed[] = new Array(spec.edges.length);
   for (const indices of groups.values()) {
     indices.forEach((edgeIndex, i) => {
-      const [source, target, weight] = spec.edges[edgeIndex]!;
+      const [source, target, weight, symbol] = spec.edges[edgeIndex]!;
       const curvature =
         indices.length === 1 ? 0 : (i - (indices.length - 1) / 2) * 2 * SPREAD;
-      out[edgeIndex] = { source, target, weight, curvature };
+      out[edgeIndex] = { source, target, weight, symbol, curvature };
     });
   }
   return out;
@@ -177,13 +178,16 @@ export function renderSvg(
       `  <path d="${path}" fill="none" stroke="${ink}" stroke-width="${f(stroke())}" ` +
         `stroke-linecap="round"${arrow}/>`,
     );
-    if (edge.weight !== null) {
+    // An automaton edge carries a symbol where a weighted graph carries a
+    // number. Exactly one of the two is drawn.
+    const edgeText = edge.symbol ?? (edge.weight !== null ? String(edge.weight) : null);
+    if (edgeText !== null) {
       const tilt = sketch ? ` transform="rotate(${f((rand() - 0.5) * 16)} ${f(labelAt.x)} ${f(labelAt.y)})"` : "";
       parts.push(
         `  <text x="${f(labelAt.x)}" y="${f(labelAt.y)}"${tilt} ` +
           `font-family="${font}" font-size="${sketch ? 17 : 15}" fill="${ink}" ` +
           `text-anchor="middle" dominant-baseline="central" ` +
-          `stroke="#fff" stroke-width="3.5" paint-order="stroke">${edge.weight}</text>`,
+          `stroke="#fff" stroke-width="3.5" paint-order="stroke">${escapeXml(edgeText)}</text>`,
       );
     }
   }
@@ -194,9 +198,35 @@ export function renderSvg(
       ? `  <path d="${sketchCircle(p, R, rand)}" fill="#fff" stroke="${ink}" ` +
         `stroke-width="${f(stroke())}" stroke-linecap="round"/>`
       : `  <circle cx="${f(p.x)}" cy="${f(p.y)}" r="${R}" fill="#fff" stroke="${ink}" stroke-width="1.8"/>`;
+
+    // Start state: a stub arrow entering from the left, originating nowhere.
+    // Drawn first so the vertex outline sits on top of where it lands.
+    if (spec.start === label) {
+      const j = sketch ? () => (rand() - 0.5) * 5 : () => 0;
+      parts.push(
+        `  <path d="M ${f(p.x - R - 42 + j())},${f(p.y + j())} ` +
+          `L ${f(p.x - R - 2)},${f(p.y + j())}" fill="none" stroke="${ink}" ` +
+          `stroke-width="${f(stroke())}" stroke-linecap="round" marker-end="url(#a)"/>`,
+      );
+    }
+
+    parts.push(shape);
+
+    // Accepting state: the inner ring of the conventional double circle. It has
+    // to come AFTER the outer circle -- that one is fill="#fff", so a ring drawn
+    // first would be painted over and invisible.
+    if (spec.accept?.includes(label)) {
+      parts.push(
+        sketch
+          ? `  <path d="${sketchCircle(p, R - 5, rand)}" fill="none" stroke="${ink}" ` +
+            `stroke-width="${f(stroke())}" stroke-linecap="round"/>`
+          : `  <circle cx="${f(p.x)}" cy="${f(p.y)}" r="${R - 5}" fill="none" ` +
+            `stroke="${ink}" stroke-width="1.8"/>`,
+      );
+    }
+
     const tilt = sketch ? ` transform="rotate(${f((rand() - 0.5) * 18)} ${f(p.x)} ${f(p.y)})"` : "";
     parts.push(
-      shape,
       `  <text x="${f(p.x)}" y="${f(p.y)}"${tilt} font-family="${font}" ` +
         `font-size="${label.length > 3 ? (sketch ? 12 : 11) : sketch ? 18 : 16}" fill="${ink}" ` +
         `text-anchor="middle" dominant-baseline="central">${escapeXml(label)}</text>`,

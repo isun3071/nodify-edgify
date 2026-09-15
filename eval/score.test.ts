@@ -27,7 +27,7 @@ check("identity: k5 (undirected)", score(k5, clone(k5)).fixes, 0);
   check("drop one edge", score(dijkstra, g).fixes, 1); }
 
 // one spurious edge
-{ const g = clone(dijkstra); g.edges.push({ id: "x", source: "s", target: "x", weight: 1 });
+{ const g = clone(dijkstra); g.edges.push({ id: "x", source: "s", target: "x", weight: 1, label: null });
   check("add one phantom edge", score(dijkstra, g).fixes, 1); }
 
 // wrong weight
@@ -68,6 +68,35 @@ check("identity: k5 (undirected)", score(k5, clone(k5)).fixes, 0);
 // label case/whitespace must not count as a different vertex
 { const g = clone(k5); g.nodes[0]!.label = " a ";
   check("label ' a ' vs 'A'", score(k5, g).fixes, 0); }
+
+// ---- automata fields ----
+const dfa = load("dfa-binary");
+check("identity: dfa-binary", score(dfa, clone(dfa)).fixes, 0);
+
+{ const g = clone(dfa); g.nodes.find((n) => n.label === "q0")!.accept = false;
+  check("accepting state missed", score(dfa, g).fixes, 1); }
+
+{ const g = clone(dfa); g.nodes.find((n) => n.label === "q0")!.start = false;
+  check("start state missed", score(dfa, g).fixes, 1); }
+
+{ const g = clone(dfa); const n = g.nodes.find((x) => x.label === "q0")!;
+  n.start = false; n.accept = false;
+  check("q0 is BOTH start and accept; losing both", score(dfa, g).fixes, 2,
+    "(two independent flags, not one enum)"); }
+
+{ const g = clone(dfa); g.edges[0]!.label = "1";
+  check("transition symbol misread", score(dfa, g).fixes, 1); }
+
+{ const g = clone(dfa); const e = g.edges[0]!; e.label = null; e.weight = 0;
+  check("symbol coerced into a weight", score(dfa, g).fixes, 2,
+    "(wrong symbol + wrong weight)"); }
+
+const nfa = load("nfa-multisymbol");
+check("identity: nfa-multisymbol", score(nfa, clone(nfa)).fixes, 0);
+
+{ const g = clone(nfa); const e = g.edges.find((x) => x.label === "a,b")!;
+  e.label = "a";
+  check("comma-separated symbol set split", score(nfa, g).fixes, 1); }
 
 console.log(failures ? `\n${failures} scorer test(s) failed` : "\nscorer behaves as specified");
 process.exit(failures ? 1 : 0);

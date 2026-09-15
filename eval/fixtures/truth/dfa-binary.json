@@ -1,0 +1,61 @@
+{
+  "directed": true,
+  "weighted": false,
+  "nodes": [
+    {
+      "id": "q0",
+      "label": "q0",
+      "start": true,
+      "accept": true,
+      "x": 0.3333,
+      "y": 0.5
+    },
+    {
+      "id": "q1",
+      "label": "q1",
+      "start": false,
+      "accept": false,
+      "x": 0.6667,
+      "y": 0.5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "q0",
+      "target": "q0",
+      "weight": null,
+      "label": "0"
+    },
+    {
+      "id": "e1",
+      "source": "q0",
+      "target": "q1",
+      "weight": null,
+      "label": "1"
+    },
+    {
+      "id": "e2",
+      "source": "q1",
+      "target": "q1",
+      "weight": null,
+      "label": "0"
+    },
+    {
+      "id": "e3",
+      "source": "q1",
+      "target": "q0",
+      "weight": null,
+      "label": "1"
+    }
+  ],
+  "_meta": {
+    "kind": "hard",
+    "traps": [
+      "transition symbols not weights",
+      "accept state double circle",
+      "start arrow",
+      "self-loops"
+    ]
+  }
+}

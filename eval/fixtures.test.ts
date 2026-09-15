@@ -23,21 +23,38 @@ for (const spec of FIXTURES) {
   // INVARIANT 2: same element counts in both modes -- jitter must not add or
   // drop an edge. Sketch draws vertices as <path>, so count paths as a whole.
   const count = (svg: string, re: RegExp) => (svg.match(re) ?? []).length;
-  const weighted = spec.edges.filter(([, , w]) => w !== null).length;
   // fill="none" is an edge; fill="#fff" is a sketch-mode vertex; the arrowhead
   // marker in <defs> is neither and must not be counted.
+  //
+  // Automata notation adds two more fill="none" strokes per diagram: the start
+  // state's incoming stub arrow (both modes), and the accepting state's inner
+  // ring -- a <circle> in clean mode but a <path> in sketch mode, so only the
+  // sketch count includes it.
   const EDGE = /<path d="[^"]+" fill="none"/g;
   const VERTEX = /<path d="[^"]+" fill="#fff"/g;
-  if (count(clean.svg, EDGE) !== spec.edges.length)
-    fail(`${spec.name}: clean edge paths ${count(clean.svg, EDGE)}!=${spec.edges.length}`);
-  if (count(sketch.svg, EDGE) !== spec.edges.length)
-    fail(`${spec.name}: sketch edge paths ${count(sketch.svg, EDGE)}!=${spec.edges.length}`);
+  const startArrows = spec.start ? 1 : 0;
+  const acceptRings = spec.accept?.length ?? 0;
+
+  const wantCleanPaths = spec.edges.length + startArrows;
+  const wantSketchPaths = spec.edges.length + startArrows + acceptRings;
+  if (count(clean.svg, EDGE) !== wantCleanPaths)
+    fail(`${spec.name}: clean paths ${count(clean.svg, EDGE)}!=${wantCleanPaths}`);
+  if (count(sketch.svg, EDGE) !== wantSketchPaths)
+    fail(`${spec.name}: sketch paths ${count(sketch.svg, EDGE)}!=${wantSketchPaths}`);
   if (count(sketch.svg, VERTEX) !== spec.nodes.length)
     fail(`${spec.name}: sketch vertex paths ${count(sketch.svg, VERTEX)}!=${spec.nodes.length}`);
-  if (count(clean.svg, /<text /g) !== spec.nodes.length + weighted)
-    fail(`${spec.name}: clean text count`);
-  if (count(sketch.svg, /<text /g) !== spec.nodes.length + weighted)
-    fail(`${spec.name}: sketch text count`);
+
+  // An accepting state must be drawn as a real double circle in clean mode.
+  if (acceptRings && count(clean.svg, /<circle [^>]*fill="none"/g) !== acceptRings)
+    fail(`${spec.name}: accept rings missing in clean render`);
+
+  // Every edge carrying either a weight or a symbol gets exactly one label.
+  const annotated = spec.edges.filter(([, , w, sym]) => w !== null || sym !== undefined).length;
+  for (const [mode, svg] of [["clean", clean.svg], ["sketch", sketch.svg]] as const) {
+    const texts = count(svg, /<text /g);
+    if (texts !== spec.nodes.length + annotated)
+      fail(`${spec.name}: ${mode} text ${texts}!=${spec.nodes.length + annotated}`);
+  }
 
   // INVARIANT 3: determinism -- re-rendering must be byte-identical, or a
   // regeneration silently invalidates every cached response.

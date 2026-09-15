@@ -27,11 +27,13 @@ function main() {
       nodes: spec.nodes.map((label) => ({
         id: label,
         label,
+        start: spec.start === label,
+        accept: spec.accept?.includes(label) ?? false,
         x: +(normalized.get(label)?.x ?? 0.5).toFixed(4),
         y: +(normalized.get(label)?.y ?? 0.5).toFixed(4),
       })),
-      edges: spec.edges.map(([source, target, weight], i) => ({
-        id: `e${i}`, source, target, weight,
+      edges: spec.edges.map(([source, target, weight, label], i) => ({
+        id: `e${i}`, source, target, weight, label: label ?? null,
       })),
     };
     writeFileSync(

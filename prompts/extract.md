@@ -31,7 +31,22 @@ Work through these in order:
    If a number could plausibly belong to either of two edges, pick the closer
    one. If an edge has no number, its weight is null.
 
-5. NUMBERS THAT ARE NOT WEIGHTS. Vertices are often labeled 0, 1, 2, 3 rather
+5. AUTOMATA NOTATION. These diagrams also appear as finite automata and Turing
+   machines, where the same circles-and-arrows carry extra meaning:
+   - A vertex drawn as a DOUBLE CIRCLE is an accepting state. Set accept=true.
+     The inner ring is easy to miss on a low-resolution image -- look for it.
+   - A vertex with an arrow pointing into it FROM NOWHERE (the arrow does not
+     start at another vertex) is the start state. Set start=true.
+   - A vertex can be both at once. A start state is very often also accepting.
+   - Edge labels here are SYMBOLS, not weights: "a", "b", "0,1", "a/b->R" for a
+     Turing machine. Put those in the edge's `label` and leave `weight` null.
+     Keep comma-separated symbol sets together in one label exactly as drawn --
+     "0,1" on one arrow is one label, not two edges.
+   - An edge labeled with a plain number in a weighted graph is a weight, not a
+     symbol. Use `weight` for those and leave `label` null.
+   For ordinary graphs, every vertex gets start=false and accept=false.
+
+6. NUMBERS THAT ARE NOT WEIGHTS. Vertices are often labeled 0, 1, 2, 3 rather
    than A, B, C. A number inside or immediately next to a circle is a vertex
    label, not a weight. A number sitting on a line between two circles is a
    weight. Do not invent a vertex for a weight, or a weight for a vertex.

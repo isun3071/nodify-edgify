@@ -5,36 +5,48 @@
     {
       "id": "u1",
       "label": "u1",
+      "start": false,
+      "accept": false,
       "x": 0.25,
       "y": 0.25
     },
     {
       "id": "u2",
       "label": "u2",
+      "start": false,
+      "accept": false,
       "x": 0.25,
       "y": 0.5
     },
     {
       "id": "u3",
       "label": "u3",
+      "start": false,
+      "accept": false,
       "x": 0.25,
       "y": 0.75
     },
     {
       "id": "v1",
       "label": "v1",
+      "start": false,
+      "accept": false,
       "x": 0.75,
       "y": 0.25
     },
     {
       "id": "v2",
       "label": "v2",
+      "start": false,
+      "accept": false,
       "x": 0.75,
       "y": 0.5
     },
     {
       "id": "v3",
       "label": "v3",
+      "start": false,
+      "accept": false,
       "x": 0.75,
       "y": 0.75
     }
@@ -44,55 +56,64 @@
       "id": "e0",
       "source": "u1",
       "target": "v1",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e1",
       "source": "u1",
       "target": "v2",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e2",
       "source": "u1",
       "target": "v3",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e3",
       "source": "u2",
       "target": "v1",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e4",
       "source": "u2",
       "target": "v2",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e5",
       "source": "u2",
       "target": "v3",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e6",
       "source": "u3",
       "target": "v1",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e7",
       "source": "u3",
       "target": "v2",
-      "weight": null
+      "weight": null,
+      "label": null
     },
     {
       "id": "e8",
       "source": "u3",
       "target": "v3",
-      "weight": null
+      "weight": null,
+      "label": null
     }
   ],
   "_meta": {

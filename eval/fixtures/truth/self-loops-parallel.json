@@ -5,18 +5,24 @@
     {
       "id": "q0",
       "label": "q0",
+      "start": false,
+      "accept": false,
       "x": 0.25,
       "y": 0.5
     },
     {
       "id": "q1",
       "label": "q1",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.5
     },
     {
       "id": "q2",
       "label": "q2",
+      "start": false,
+      "accept": false,
       "x": 0.75,
       "y": 0.5
     }
@@ -26,43 +32,50 @@
       "id": "e0",
       "source": "q0",
       "target": "q0",
-      "weight": 1
+      "weight": 1,
+      "label": null
     },
     {
       "id": "e1",
       "source": "q0",
       "target": "q1",
-      "weight": 2
+      "weight": 2,
+      "label": null
     },
     {
       "id": "e2",
       "source": "q0",
       "target": "q1",
-      "weight": 5
+      "weight": 5,
+      "label": null
     },
     {
       "id": "e3",
       "source": "q1",
       "target": "q1",
-      "weight": 3
+      "weight": 3,
+      "label": null
     },
     {
       "id": "e4",
       "source": "q1",
       "target": "q2",
-      "weight": 4
+      "weight": 4,
+      "label": null
     },
     {
       "id": "e5",
       "source": "q2",
       "target": "q0",
-      "weight": 6
+      "weight": 6,
+      "label": null
     },
     {
       "id": "e6",
       "source": "q2",
       "target": "q2",
-      "weight": 7
+      "weight": 7,
+      "label": null
     }
   ],
   "_meta": {

@@ -5,42 +5,56 @@
     {
       "id": "A",
       "label": "A",
+      "start": false,
+      "accept": false,
       "x": 0.5,
       "y": 0.1129
     },
     {
       "id": "B",
       "label": "B",
+      "start": false,
+      "accept": false,
       "x": 0.8026,
       "y": 0.2586
     },
     {
       "id": "C",
       "label": "C",
+      "start": false,
+      "accept": false,
       "x": 0.8774,
       "y": 0.5861
     },
     {
       "id": "D",
       "label": "D",
+      "start": false,
+      "accept": false,
       "x": 0.668,
       "y": 0.8488
     },
     {
       "id": "E",
       "label": "E",
+      "start": false,
+      "accept": false,
       "x": 0.332,
       "y": 0.8488
     },
     {
       "id": "F",
       "label": "F",
+      "start": false,
+      "accept": false,
       "x": 0.1226,
       "y": 0.5861
     },
     {
       "id": "G",
       "label": "G",
+      "start": false,
+      "accept": false,
       "x": 0.1974,
       "y": 0.2586
     }
@@ -50,67 +64,78 @@
       "id": "e0",
       "source": "A",
       "target": "B",
-      "weight": 7
+      "weight": 7,
+      "label": null
     },
     {
       "id": "e1",
       "source": "A",
       "target": "D",
-      "weight": 5
+      "weight": 5,
+      "label": null
     },
     {
       "id": "e2",
       "source": "B",
       "target": "C",
-      "weight": 8
+      "weight": 8,
+      "label": null
     },
     {
       "id": "e3",
       "source": "B",
       "target": "D",
-      "weight": 9
+      "weight": 9,
+      "label": null
     },
     {
       "id": "e4",
       "source": "B",
       "target": "E",
-      "weight": 7
+      "weight": 7,
+      "label": null
     },
     {
       "id": "e5",
       "source": "C",
       "target": "E",
-      "weight": 5
+      "weight": 5,
+      "label": null
     },
     {
       "id": "e6",
       "source": "D",
       "target": "E",
-      "weight": 15
+      "weight": 15,
+      "label": null
     },
     {
       "id": "e7",
       "source": "D",
       "target": "F",
-      "weight": 6
+      "weight": 6,
+      "label": null
     },
     {
       "id": "e8",
       "source": "E",
       "target": "F",
-      "weight": 8
+      "weight": 8,
+      "label": null
     },
     {
       "id": "e9",
       "source": "E",
       "target": "G",
-      "weight": 9
+      "weight": 9,
+      "label": null
     },
     {
       "id": "e10",
       "source": "F",
       "target": "G",
-      "weight": 11
+      "weight": 11,
+      "label": null
     }
   ],
   "_meta": {

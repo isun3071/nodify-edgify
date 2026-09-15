@@ -21,12 +21,19 @@ export interface FixtureSpec {
   /** What this fixture is designed to break. Shows up in per-fixture results. */
   traps: string[];
   directed: boolean;
+  /** Automata notation: the start state, and the accepting states. */
+  start?: string;
+  accept?: string[];
   layout: Layout;
   /** Explicit layer assignment for layout "layered". Left to right. */
   layers?: string[][];
   nodes: string[];
-  /** [source, target, weight] -- weight null means unlabeled. */
-  edges: [string, string, number | null][];
+  /**
+   * [source, target, weight, symbol?]
+   * `weight` null means no numeric label; `symbol` carries a transition label
+   * such as "a" or "0,1" for automata, where weight is meaningless.
+   */
+  edges: [string, string, number | null, string?][];
 }
 
 const pentagon = ["0", "1", "2", "3", "4"];
@@ -202,6 +209,43 @@ export const FIXTURES: FixtureSpec[] = [
       ["v1", "v3", 12],
       ["v3", "v2", 9], ["v2", "v4", 14],
       ["v4", "v3", 7], ["v3", "t", 20], ["v4", "t", 4],
+    ],
+  },
+  {
+    name: "dfa-binary",
+    description: "DFA over {0,1} accepting strings with an even number of 1s",
+    kind: "hard",
+    traps: ["transition symbols not weights", "accept state double circle", "start arrow", "self-loops"],
+    directed: true,
+    start: "q0",
+    accept: ["q0"],
+    layout: "layered",
+    layers: [["q0"], ["q1"]],
+    nodes: ["q0", "q1"],
+    edges: [
+      ["q0", "q0", null, "0"],
+      ["q0", "q1", null, "1"],
+      ["q1", "q1", null, "0"],
+      ["q1", "q0", null, "1"],
+    ],
+  },
+  {
+    name: "nfa-multisymbol",
+    description: "NFA with multi-symbol edge labels and two accepting states",
+    kind: "hard",
+    traps: ["comma-separated symbols", "two accept states", "epsilon transition"],
+    directed: true,
+    start: "s0",
+    accept: ["s2", "s3"],
+    layout: "layered",
+    layers: [["s0"], ["s1"], ["s2", "s3"]],
+    nodes: ["s0", "s1", "s2", "s3"],
+    edges: [
+      ["s0", "s0", null, "a,b"],
+      ["s0", "s1", null, "a"],
+      ["s1", "s2", null, "b"],
+      ["s1", "s3", null, "e"],
+      ["s2", "s2", null, "a,b"],
     ],
   },
   {
