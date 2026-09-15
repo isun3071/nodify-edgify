@@ -5,6 +5,18 @@ import { costOf, type Extractor, type ExtractResult, type ModelSpec } from "./ty
 const ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
 
 /**
+ * The user-turn instruction. It has to contain the literal word "json": some
+ * OpenAI-compatible providers (Alibaba, serving the Qwen models) reject a
+ * request with `response_format` set unless the messages mention it, with
+ * `'messages' must contain the word 'json' in some form`. OpenRouter forwards
+ * that rejection as an HTTP 400, so the model never runs at all.
+ *
+ * Exported because eval/run.ts folds it into the response cache key -- it is
+ * part of the request, so changing it has to invalidate cached answers.
+ */
+export const USER_INSTRUCTION = "Extract the graph from this image as JSON.";
+
+/**
  * OpenRouter, OpenAI-compatible chat completions.
  *
  * Schema enforcement here is per-endpoint, not per-model: some providers
@@ -44,7 +56,7 @@ export function openrouterExtractor(spec: ModelSpec): Extractor {
                       url: `data:${mediaType};base64,${image.toString("base64")}`,
                     },
                   },
-                  { type: "text", text: "Extract the graph from this image." },
+                  { type: "text", text: USER_INSTRUCTION },
                 ],
               },
             ],

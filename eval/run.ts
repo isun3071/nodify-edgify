@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import "dotenv/config";
-import { extractorFor, MODELS } from "../src/extract/index.js";
+import { extractorFor, MODELS, USER_INSTRUCTION } from "../src/extract/index.js";
 import type { Graph } from "../src/graph/schema.js";
 import { score, zeroScore, type Score } from "./score.js";
 import { parseImageName, TIERS, TIER_BY_NAME, type TierName } from "./fixtures/tiers.js";
@@ -39,8 +39,12 @@ function parseArgs() {
 }
 
 function cachePath(model: string, promptText: string, image: Buffer, key: string): string {
+  // Every input that shapes the request belongs in the key. The user-turn
+  // instruction was missing: editing it changed what the model saw while
+  // leaving the key identical, so stale answers would have been served as
+  // though they came from the new prompt.
   const hash = createHash("sha256")
-    .update(model).update(promptText).update(image)
+    .update(model).update(promptText).update(USER_INSTRUCTION).update(image)
     .digest("hex").slice(0, 12);
   return join(RUNS, `${model}__${key}__${hash}.json`);
 }

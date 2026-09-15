@@ -3,6 +3,7 @@ import { lookup } from "./registry.js";
 import type { Extractor } from "./types.js";
 
 export { MODELS, lookup } from "./registry.js";
+export { USER_INSTRUCTION } from "./openrouter.js";
 export type { Extractor, ExtractResult, ModelSpec, Usage } from "./types.js";
 
 /**
